@@ -1,0 +1,148 @@
+/*
+
+Qi Design Standard
+
+*/
+
+/******* Config *******/
+
+@config-lighten: 13%;
+
+/******* Layouts *******/
+
+@grid: 8px;
+@top: 9999;
+
+/******* Colors *******/
+
+@color: @color-poe;
+
+@color-list: "sunflower", "starrynight", "enjolras", "spring";
+
+@color-sunflower: #CCA633;
+@color-poe: #333333;
+@color-starrynight: #2953A6;
+@color-enjolras: #A62929;
+@color-spring: #8BAD64;
+
+@color-black: #000;
+@color-white: #FFF;
+
+@color-light-foreground: @color-poe; 
+@color-light-secondary-text: fade(@color-poe, 50%);
+@color-light-decorate: fade(@color-poe, 20%);
+@color-light-secondary-background: fade(@color-poe, 5%);
+@color-light-background: @color-white;
+
+@color-dark-foreground: fade(@color-white, 80%);
+@color-dark-secondary-text: fade(@color-white, 50%);
+@color-dark-decorate: fade(@color-white, 30%);
+@color-dark-secondary-background: fade(@color-white, 15%);
+@color-dark-background: @color-black;
+
+/******* Fonts *******/
+
+@font-base-color: @color-light-foreground;
+@font-base-lineheight: 4px;
+
+.font-note(@mode: 0) {
+    @font-size:  12px;
+    @font-lineheight: @font-base-lineheight;
+
+    // color: fade(@font-base-color, 50%);
+    font-size: @font-size;
+    line-height: @font-size + (@font-lineheight * @mode);
+}
+
+.font-text(@mode: 0) {
+    @font-size:  14px;
+    @font-lineheight: @font-base-lineheight;
+
+    // color: @font-base-color;
+    font-size: @font-size;
+    line-height: @font-size + (@font-lineheight * @mode);
+}
+
+.font-subtitle(@mode: 0) {
+    @font-size:  16px;
+    @font-lineheight: @font-base-lineheight;
+
+    // color: @font-base-color;
+    font-size: @font-size;
+    font-weight: bold;
+    line-height: @font-size + (@font-lineheight * @mode);
+}
+
+.font-title(@mode: 0) {
+    @font-size:  24px;
+    @font-lineheight: @font-base-lineheight;
+
+    // color: @font-base-color;
+    font-size: @font-size;
+    font-weight: bold;
+    line-height: @font-size + (@font-lineheight * @mode);
+}
+
+.font-headline(@mode: 0) {
+    @font-size:  32px;
+    @font-lineheight: @font-base-lineheight;
+
+    // color: @font-base-color;
+    font-size: @font-size;
+    font-weight: bold;
+    line-height: @font-size + (@font-lineheight * @mode);
+}
+
+
+/******* Easing *******/
+
+@ease-default: cubic-bezier(0.3, 0.3, 0, 1);
+@ease-strong: cubic-bezier(0.3, 1, 0, 1);
+@ease-weak: cubic-bezier(0.5, 0, 0.5, 1);
+
+/******* Functions *******/
+
+.noselect(){
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.canselect(){
+    user-select: auto;
+    -o-user-select: auto;
+    -ms-user-select: auto;
+    -moz-user-select: auto;
+    -webkit-user-select: auto;
+    cursor: auto;
+}
+
+.margin-block(@start:0, @end:0) when (@start <= @end) {
+    .margin-block-@{start} {
+        margin: @start * @grid
+    }
+    .margin-block((@start + 1), @end);
+}
+
+.transition(@props:all, @time:500ms, @ease: @ease-strong){
+    -webkit-transition: @props @time @ease;
+    -moz-transition: @props @time @ease;
+    -ms-transition: @props @time @ease;
+    -o-transition: @props @time @ease;
+    transition: @props @time @ease;
+}
+
+.clearfloat::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.reset(){
+    margin: 0px;
+    padding: 0px;
+    line-height: initial;
+}

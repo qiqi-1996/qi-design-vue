@@ -1,0 +1,79 @@
+{
+    "Comment Block": {
+        "description": "Used as a divider for the code",
+        "scope": "javascript,css,less",
+        "prefix": ["comment-block", "cb"],
+        "body": [
+            "/******* $1 *******/"
+        ]
+    },
+
+    // Styles
+
+    "Import Standard Less": {
+        "scope": "css,less",
+        "prefix": ["import-standard", "is"],
+        "body": [
+            "@import \"~@/core/standard.less\";"
+        ]
+    },
+    "CSS Selector For Judgment": {
+        "scope": "css,less",
+        "prefix": ["c", "[c]"],
+        "body": [
+            "[class*=\"$1\"]"
+        ]
+    },
+    "CSS Selector For Light Theme": {
+        "scope": "css,less",
+        "prefix": ["theme-light", "tl"],
+        "body": [
+            "[class*=\"theme-light\"]"
+        ]
+    },
+    "CSS Selector For Dark Theme": {
+        "scope": "css,less",
+        "prefix": ["theme-dark", "td"],
+        "body": [
+            "[class*=\"theme-dark\"]"
+        ]
+    },
+
+    // Javascript
+
+    "Import Mixins": {
+        "scope": "javascript",
+        "prefix": ["import-mixins", "im"],
+        "body": [
+            "import mixins from \"@/core/mixins.js\";"
+        ]
+    },
+    "Import Utils": {
+        "scope": "javascript",
+        "prefix": ["import-utils", "iu"],
+        "body": [
+            "import utils from \"@/core/utils.js\";"
+        ]
+    },
+
+    // Templates
+
+    "Document Template": {
+        "scope": "html,vue",
+        "prefix": ["document-template", "dt"],
+        "body": [
+            "<template>",
+            "\t<document>",
+            "\t\t<q-title :level=\"1\" colorful>${1:组件名称} <strong>${2:组件标识}</strong></q-title>",
+            "",
+            "\t\t<q-title :level=\"2\">预览</q-title>",
+            "",
+            "\t\t<window>",
+            "\t\t    $3",
+            "\t\t</window>",
+            "",
+            "\t</document>",
+            "</template>",
+        ]
+    }
+}

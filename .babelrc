@@ -1,0 +1,27 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "ie": "10"
+                },
+                "corejs": 3,
+                "useBuiltIns": "usage"
+            }
+        ],
+        "@vue/babel-preset-jsx"
+    ],
+    "plugins": [
+        // ["@babel/plugin-transform-runtime", {
+        //     "corejs": 3
+        // }],
+        "@babel/plugin-proposal-optional-chaining",
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": true
+            }
+        ]
+    ]
+}
