@@ -1,3 +1,4 @@
+import QBadge from "./badge/index.vue";
 import QButton from "./button/index.vue";
 import QCheckbox from "./checkbox/index.vue";
 import QCollapseTransition from "./collapseTransition/index.vue";
@@ -9,6 +10,7 @@ import QHover from "./hover/index.vue";
 import QIcon from "./icon/index.vue";
 import QImage from "./image/index.vue";
 import QInput from "./input/index.vue";
+import QMenu from "./menu/index.vue";
 import QPanel from "./panel/index.vue";
 import QProgress from "./progress/index.vue";
 import QQuote from "./quote/index.vue";
@@ -25,6 +27,7 @@ import QTree from "./tree/index.vue";
 import QTreeNode from "./treeNode/index.vue";
 
 export default {
+    QBadge,
     QButton,
     QCheckbox,
     QCollapseTransition,
@@ -36,6 +39,7 @@ export default {
     QIcon,
     QImage,
     QInput,
+    QMenu,
     QPanel,
     QProgress,
     QQuote,

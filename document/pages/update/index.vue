@@ -3,22 +3,28 @@
         <article class="container">
             <q-panel class="description" secondary>
                 <q-footnote>此处的版本指代组件库版本，文档内容的更新将根据相关性合并到当前或下一个组件库版本的更新内容中。</q-footnote>
+                <q-footnote>设计规范修改、重构将提升 主版本号（Major Version Number）</q-footnote>
+                <q-footnote>新增组件和特性将提升 子版本号（Minor Version Number）</q-footnote>
+                <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
-            <q-title :level="1" colorful>V0.0.3</q-title>
-            <!-- <q-footnote>2020-04-27</q-footnote> -->
+            <q-title :level="1" colorful>Version 0.1.0</q-title>
+            <q-footnote>2020-04-27</q-footnote>
             <ul>
                 <q-title :level="3">新增</q-title>
-                <li>新增 春天（莫奈） 配色 </li>
+                <li>新增 Badge 组件和文档</li>
+                <li>新增 春天（Inspired by 莫奈） 配色 </li>
                 <q-title :level="3">修复</q-title>
                 <li>修复 ColorBlock 组件在白昼模式下的样式问题</li>
+                <li>完善文档更新说明</li>
                 <q-title :level="3">变更</q-title>
                 <li>变更文档页标题文案内容</li>
+                <li>变更文档更新说明样式</li>
             </ul>
 
             <q-divider></q-divider>
 
-            <q-title :level="1" colorful>V0.0.2</q-title>
+            <q-title :level="1" colorful>Version 0.0.2</q-title>
             <q-footnote>2020-04-26</q-footnote>
             <ul>
                 <q-title :level="3">优化</q-title>
@@ -31,7 +37,7 @@
 
             <q-divider></q-divider>
 
-            <q-title :level="1" colorful>V0.0.1 <span>- Initial Release</span></q-title>
+            <q-title :level="1" colorful>Version 0.0.1 <span>- Initial Release</span></q-title>
             <q-footnote>2020-04-26</q-footnote>
             <ul>
                 <li>初始发布</li>

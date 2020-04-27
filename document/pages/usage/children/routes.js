@@ -5,6 +5,11 @@ export default [
         component: ()=>import("./404/index.vue"),
     },
     {
+        name: "badge",
+        path: "badge",
+        component: ()=>import("./badge/index.vue"),
+    },
+    {
         name: "button",
         path: "button",
         component: ()=>import("./button/index.vue"),

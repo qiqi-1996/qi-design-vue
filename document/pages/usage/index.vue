@@ -93,7 +93,7 @@ export default {
                 //     imageDark: require("./icons/tree_dark.png"),
                 // },
 
-                /******* 装饰性组件 *******/
+                /******* 呈现类组件 *******/
 
                 {
                     type: "divider"
@@ -115,16 +115,22 @@ export default {
                     imageDark: require("./icons/panel_dark.png"),
                 },
                 {
+                    to: "/usage/typography",
+                    title: "文字排版",
+                    imageLight: require("./icons/typography_light.png"),
+                    imageDark: require("./icons/typography_dark.png"),
+                },
+                {
                     to: "/usage/icon",
                     title: "图标",
                     imageLight: require("./icons/icon_light.png"),
                     imageDark: require("./icons/icon_dark.png"),
                 },
                 {
-                    to: "/usage/typography",
-                    title: "文字排版",
-                    imageLight: require("./icons/typography_light.png"),
-                    imageDark: require("./icons/typography_dark.png"),
+                    to: "/usage/badge",
+                    title: "徽章",
+                    imageLight: require("./icons/badge_light.png"),
+                    imageDark: require("./icons/badge_dark.png"),
                 },
                 {
                     to: "/usage/divider",
