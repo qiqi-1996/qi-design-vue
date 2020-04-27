@@ -40,7 +40,7 @@
                         :key="index"
                         @click="handleColorChange(colorname)"
                     >
-                        <q-color-block round :color="colorname"></q-color-block>
+                        <q-color-block size="16" round :color="colorname"></q-color-block>
                     </q-hover>
 
                 </q-panel>

@@ -6,27 +6,31 @@
 @import "~@/core/standard.less";
 
 .q-color-block {
-    width: 16px;
-    height: 16px;
+    // width: 16px;
+    // height: 16px;
     .transition();
 }
 
 .q-color-block[class*="theme-light"] {
     background: @color-light-foreground;
+    color: @color-light-background;
 }
 
 .q-color-block[class*="theme-dark"] {
     background: @color-dark-foreground;
+    color: @color-dark-background;
 }
 
 .q-color-block-colors(@colorname){
     @varname: "color-@{colorname}";
 
-    .q-color-block[class*="@{varname}"] {
+    .q-color-block[class*="theme-light"][class*="@{varname}"] {
+        color: @color-light-background;
         background: @@varname;
     }
 
-    .q-color-block[class*="@{varname}"] {
+    .q-color-block[class*="theme-dark"][class*="@{varname}"] {
+        color: @color-dark-foreground;
         background: lighten(@@varname, @config-lighten);
     }
 }
@@ -51,10 +55,7 @@ export default {
         mode: {
             default: "static"
         },
-        size: {
-            type: Number,
-            default: 16
-        },
+        size: Number,
         round: Boolean
     },
     data(){
@@ -72,8 +73,6 @@ export default {
             let result = {};
             if(this.size){
                 result.width = this.size + "px"
-            }
-            if(this.size){
                 result.height= this.size + "px"
             }
             if(this.round){
