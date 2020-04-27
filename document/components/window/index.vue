@@ -4,7 +4,7 @@
             <div class="controller">
                 <q-color-block :size="12" round color="enjolras" class="item"></q-color-block>
                 <q-color-block :size="12" round color="sunflower" class="item"></q-color-block>
-                <q-color-block :size="12" round color="green" class="item"></q-color-block>
+                <q-color-block :size="12" round color="spring" class="item"></q-color-block>
             </div>
         </div>
         <slot></slot>

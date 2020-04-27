@@ -154,9 +154,9 @@ export default {
         },
         handleClickRouterLink(option, index) {
             if(index>this.current){
-                this.direction = "down";
-            }else{
                 this.direction = "up";
+            }else{
+                this.direction = "down";
             }
             this.current = index;
             this.$nextTick(()=>{

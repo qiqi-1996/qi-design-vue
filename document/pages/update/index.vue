@@ -5,13 +5,26 @@
                 <q-footnote>此处的版本指代组件库版本，文档内容的更新将根据相关性合并到当前或下一个组件库版本的更新内容中。</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>V0.0.3</q-title>
+            <!-- <q-footnote>2020-04-27</q-footnote> -->
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 春天（莫奈） 配色 </li>
+                <q-title :level="3">修复</q-title>
+                <li>修复 ColorBlock 组件在白昼模式下的样式问题</li>
+                <q-title :level="3">变更</q-title>
+                <li>变更文档页标题文案内容</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>V0.0.2</q-title>
             <q-footnote>2020-04-26</q-footnote>
             <ul>
-                <q-title :level="2">优化</q-title>
+                <q-title :level="3">优化</q-title>
                 <li>优化文档打包体积</li>
                 <li>完善安装及使用文档</li>
-                <q-title :level="2">修复</q-title>
+                <q-title :level="3">修复</q-title>
                 <li>因兼容问题，将 uuid 改为 shortid。</li>
                 <li>修复 IE10 下的样式兼容问题</li>
             </ul>
@@ -23,7 +36,7 @@
             <ul>
                 <li>初始发布</li>
                 <li>包含组件：Radio、Checkbox、Switch、Input、Button、Tab、Theme、Panel、Icon、Typography、Divider、Progress</li>
-                <li>未开放组件：Select、Tree、Image</li>
+                <li>未开放组件：Select、Tree、Image、ColorBlock</li>
             </ul>
         </article>
     </page>

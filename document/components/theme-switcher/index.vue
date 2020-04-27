@@ -13,6 +13,7 @@
                     <q-select-item value="enjolras" text="Enjolras"></q-select-item>
                     <q-select-item value="starrynight" text="星月夜"></q-select-item>
                     <q-select-item value="sunflower" text="向日葵"></q-select-item>
+                    <q-select-item value="spring" text="春天"></q-select-item>
                 </q-select>
             </span>
         </q-panel>

@@ -22,11 +22,11 @@
 .q-color-block-colors(@colorname){
     @varname: "color-@{colorname}";
 
-    .q-color-block[class*="@{varname}"] {
+    .q-color-block[class*="theme-light"][class*="@{varname}"] {
         background: @@varname;
     }
 
-    .q-color-block[class*="@{varname}"] {
+    .q-color-block[class*="theme-dark"][class*="@{varname}"] {
         background: lighten(@@varname, @config-lighten);
     }
 }

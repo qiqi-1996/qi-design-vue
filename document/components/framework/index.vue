@@ -1,12 +1,12 @@
 <template>
     <q-panel class="framework-container">
         <div class="header">
-            <div class="line">
+            <div class="headline">
                 <q-title :level="1">QI DESIGN STANDARD</q-title>
                 <q-color-block :size="8" round></q-color-block>
-                <q-title :level="3" colorful>VUE</q-title>
+                <br>
+                <q-text :level="3" colorful><strong>VUE EDITION</strong></q-text>
             </div>
-            <q-text>A verse wrote for your <strong>product</strong>.</q-text>
         </div>
 
         <q-tab class="pagetab" v-model="tabvalue" align="center">
@@ -61,8 +61,8 @@
 @import "~@/core/standard.less";
 
 .header {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 10*@grid;
+    padding-bottom: 10*@grid;
     width: 100%;
     text-align: center;
 
@@ -73,8 +73,8 @@
         vertical-align: baseline;
     }
 
-    .line {
-        margin-left: 5*@grid;
+    .headline {
+        margin-left: 2*@grid;
 
         * {
             display: inline-block;
