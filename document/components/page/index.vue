@@ -7,6 +7,7 @@
 <style lang="less" scoped>
 
 .page {
+    padding-bottom: 96px;
 }
 
 </style>

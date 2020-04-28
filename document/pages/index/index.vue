@@ -1,9 +1,9 @@
 <template>
     <page>
         <q-panel class="container">
-            <q-title :level="1" colorful>功能特性</q-title>
+            <q-title class="title" :level="2" colorful>功能特性</q-title>
 
-            <q-panel secondary class="features feature-darkmode" @click="toggleDarkMode">
+            <q-panel border class="features feature-darkmode" @click="toggleDarkMode">
                 <q-image :src="require('./darkmode_light.png')" :dark="require('./darkmode_dark.png')"></q-image>
                 <div class="description">
                     <q-title :level="3">暗夜模式</q-title>
@@ -15,37 +15,17 @@
                 </div>
             </q-panel>
 
-            <q-panel secondary class="features feature-color">
-                <q-image :src="require('./colors_light.png')" :dark="require('./colors_dark.png')"></q-image>
+            <q-panel border class="features feature-color">
                 <div class="description">
-                    <q-title :level="3">多彩组件</q-title>
+                    <q-title :level="3">多彩主题</q-title>
                     <q-footnote>不只是黑与白</q-footnote>
                 </div>
                 <div class="controller">
-                    <q-footnote>切换控件颜色</q-footnote>
-                    <q-select @change="handleColorChange">
-                        <q-select-item value="poe" text="爱伦坡">
-                            <q-color-block color="poe"></q-color-block>
-                            <p mode="single" class="title">爱伦坡</p>
-                            <p class="description">《永不复还》</p>
-                        </q-select-item>
-                        <q-select-item value="enjolras" text="Enjolras">
-                            <q-color-block color="enjolras"></q-color-block>
-                            <p mode="single" class="title">安灼拉</p>
-                            <p class="description">《悲惨世界》</p>
-                        </q-select-item>
-                        <q-select-item value="starrynight" text="星月夜">
-                            <q-color-block color="starrynight"></q-color-block>
-                            <div class="color-starrynight"></div>
-                            <p mode="single" class="title">星月夜</p>
-                            <p class="description">梵高</p>
-                        </q-select-item>
-                        <q-select-item value="sunflower" text="向日葵">
-                            <q-color-block color="sunflower"></q-color-block>
-                            <p mode="single" class="title">向日葵</p>
-                            <p class="description">梵高</p>
-                        </q-select-item>
-                    </q-select>
+                    <color-selector colorname="poe" :activedname="currentColor" @change="handleColorChange"></color-selector>
+                    <color-selector colorname="starrynight" :activedname="currentColor" @change="handleColorChange"></color-selector>
+                    <color-selector colorname="sunflower" :activedname="currentColor" @change="handleColorChange"></color-selector>
+                    <color-selector colorname="enjolras" :activedname="currentColor" @change="handleColorChange"></color-selector>
+                    <color-selector colorname="spring" :activedname="currentColor" @change="handleColorChange"></color-selector>
                 </div>
             </q-panel>
 
@@ -58,9 +38,13 @@
 
 .container {
     padding-top: 5*@grid;
-    width: 38.2%;
+    width: 61.8%;
     min-width: 480px;
     margin: 0px auto;
+
+    .title {
+        text-align: center;
+    }
 }
 
 .header {
@@ -79,7 +63,8 @@
 .features {
     box-sizing: border-box;
     padding: 16px;
-    width: 480px;
+    width: 100%;
+    max-width: 640px;
     margin: 0px auto;
     margin-bottom: 2*@grid;
 
@@ -116,9 +101,15 @@
 
 .feature-color {
     .controller {
-        margin-right: @grid;
-        float: right;
-        margin-top: 7px;
+        text-align: center;
+        margin: 2*@grid 0px;
+        display: flex;
+        justify-content: space-around;
+
+        * {
+            margin: 0px 2*@grid;
+            margin-top: 7px;
+        }
     }
 
     .q-select {
@@ -128,7 +119,6 @@
     .description {
         margin: 0px;
         margin-top: 4px;
-        opacity: 0.5;
     }
 
     .q-color-block {
@@ -141,18 +131,28 @@
 <script>
 import store from "document/store.js";
 
+import ColorSelector from "./color-selector.vue";
+
 export default {
+    components: {
+        ColorSelector
+    },
     data(){
         return {
             store
+        }
+    },
+    computed: {
+        currentColor(){
+            return this.store.color;
         }
     },
     methods: {
         toggleDarkMode(){
             this.store.enableDarkMode = !this.store.enableDarkMode;
         },
-        handleColorChange(evt){
-            this.store.color = evt.value;
+        handleColorChange(value){
+            this.store.color = value;
         }
     }
 }
