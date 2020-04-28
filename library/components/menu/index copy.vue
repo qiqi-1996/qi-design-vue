@@ -6,23 +6,23 @@
         <!-- 包裹层 -->
         <slot></slot>
         <div class="q-menu-wrapper">
-            <transition name="show">
+            <!-- <transition name="show"> -->
+                <!-- 多个层级应用 transform 时会出现渲染问题，因此暂时去掉动画效果 -->
                 <q-panel border v-if="open">
                     <q-menu _item
                         v-for="(item, index) in data"
                         :key="index"
                         :data="item"
-                        :size="size"
                     >
                     </q-menu>
                 </q-panel>
-            </transition>
+            <!-- </transition> -->
         </div>
     </div>
     <span v-else :class="className('q-menu-item')">
         <!-- 菜单项 -->
-        <q-menu :data="data.children" :open="control.open" position="right" :size="size">
-            <q-hover :hover="config.hover" @mouseenter.native="doControlOpen">
+        <q-menu :data="data.children" :open="control.open" position="right">
+            <q-hover :hover="config.hover" @click="toggleControlOpen">
                 <q-icon class="item-icon" v-show="data.icon" :name="data.icon"></q-icon>
                 <span class="item-text">{{data.text}}</span>
                 <span class="item-note" v-show="data.note" :style="{ marginRight: data.children?'16px':'0px'}">{{data.note}}</span>
@@ -119,13 +119,7 @@
 
 /******* Item Style *******/
 
-.q-menu-item[class*="size-small"] .q-hover {
-    .font-note();
-    padding: @grid;
-    cursor: pointer;
-}
-
-.q-menu-item[class*="size-normal"] .q-hover {
+.q-hover {
     padding: 2*@grid;
     cursor: pointer;
 }
@@ -178,8 +172,7 @@ import mixins from "@/core/mixins.js";
 import utils from "@/core/utils.js";
 
 const hover = {
-    border: "none",
-    color: "inherit"
+    border: "none"
 }
 
 export default {
@@ -187,13 +180,6 @@ export default {
     props: {
         open: Boolean,
         data: {},
-        size: {
-            type: String,
-            default: "normal",
-            validator(value){
-                return utils.validator(value).belongsTo("small", "normal")
-            }
-        },
         position: {
             type: String,
             default: "bottom",
@@ -217,14 +203,6 @@ export default {
 
         _item: Boolean,
     },
-    mounted(){
-        let id = this.$parent.meta?.id;
-        id && utils.event.on(`q-menu-close-${id}`, this.doControlClose);
-    },
-    beforeDestroy(){
-        let id = this.$parent.meta?.id;
-        id && utils.event.off(`q-menu-close-${id}`, this.doControlClose);
-    },
     watch:{
         open(value){
             if(!value && this.control?.open){
@@ -235,8 +213,7 @@ export default {
     data(){
         return {
             meta: {
-                id: null,
-                name: "menu",
+                name: "menu"
             },
             config: {
                 hover
@@ -250,21 +227,11 @@ export default {
         className(extra){
             return this.computeClass({
                 [extra]: true,
-                "position": this.position,
-                "size": this.size,
+                "position": this.position
             });
         },
-        doControlOpen(){
-            let id = this.$parent.meta?.id;
-            id && utils.event.emit(`q-menu-close-${id}`, ()=>{
-                this.control.open = true;
-            })
-        },
-        doControlClose(callback){
-            this.control.open = false;
-            this.$nextTick(()=>{
-                callback && callback();
-            })
+        toggleControlOpen(){
+            this.control.open = !this.control.open;
         }
     }
 }

@@ -87,6 +87,8 @@ switch (START_MODE) {
             console.log("> 追加资源");
 
             fs.copyFileSync(__dirname + "/design/Qi Design Standard.sketch", __dirname + "/dist/document/qi-design-standard.sketch")
+            fs.copyFileSync(__dirname + "/README.md", __dirname + "/dist/document/README.md");
+            fs.copyFileSync(__dirname + "/README.md", __dirname + "/dist/library/README.md");
 
             console.log("> 正在打包编译结果");
 

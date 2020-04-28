@@ -45,6 +45,11 @@ export default [
         component: ()=>import("./install/index.vue"),
     },
     {
+        name: "menu",
+        path: "menu",
+        component: ()=>import("./menu/index.vue"),
+    },
+    {
         name: "panel",
         path: "panel",
         component: ()=>import("./panel/index.vue"),

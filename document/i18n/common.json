@@ -1,0 +1,18 @@
+{
+    "en": {
+        "usage": {
+            "usage": "usage",
+            "preview": "preview",
+            "property": "property",
+            "events": "events"
+        }
+    },
+    "zh-CN": {
+        "usage": {
+            "usage": "使用方法",
+            "preview": "预览",
+            "property": "属性",
+            "events": "事件"
+        }
+    }
+}

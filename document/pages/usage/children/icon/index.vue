@@ -109,6 +109,9 @@ const surface = [
     "folder",
     "trash",
     "document",
+
+    // 杂项
+    "earth",
 ]
 
 export default {

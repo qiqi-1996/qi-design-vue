@@ -87,6 +87,12 @@ export default {
                     imageDark: require("./icons/tab_dark.png"),
                 },
                 // {
+                    // to: "/usage/menu",
+                    // title: "菜单",
+                    // imageLight: require("./icons/menu_light.png"),
+                    // imageDark: require("./icons/menu_dark.png"),
+                // },
+                // {
                 //     to: "/usage/tree",
                 //     title: "树形控件",
                 //     imageLight: require("./icons/tree_light.png"),

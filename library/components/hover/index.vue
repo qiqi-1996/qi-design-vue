@@ -6,6 +6,7 @@
 @import "~@/core/standard.less";
 
 .q-hover {
+    .font-text();
     box-sizing: border-box;
     border: 1px solid transparent;
     .transition();
