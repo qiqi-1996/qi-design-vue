@@ -7,6 +7,7 @@
                 <br>
                 <q-text :level="3" colorful><strong>VUE EDITION</strong></q-text>
             </div>
+            <!-- <q-button icon="earth" size="small">language</q-button> -->
         </div>
 
         <q-tab class="pagetab" v-model="tabvalue" align="center">

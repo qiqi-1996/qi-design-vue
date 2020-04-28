@@ -130,6 +130,7 @@
 
 .q-button[class*="size-small"] {
     padding: @grid/2 @grid;
+    padding-left: 2*@grid;
     
     .q-icon, .title {
         font-size: 12px;

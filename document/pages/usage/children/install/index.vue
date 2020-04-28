@@ -1,6 +1,7 @@
+<i18n src="./i18n.json"></i18n>
 <template>
     <document>
-        <q-title :level="1" colorful>安装与使用</q-title>
+        <q-title :level="1" colorful>{{ $t("Install")}}</q-title>
 
         <q-title :level="2">包管理器 <span style="font-size: 16px; opacity: 0.75;">推荐</span></q-title>
 
