@@ -1,12 +1,11 @@
 <i18n src="./i18n.json"></i18n>
 <template>
     <document>
-        <q-title :level="1" colorful>{{ $t("Install")}}</q-title>
+        <q-title :level="1" colorful>{{ $t("h1#1")}}</q-title>
 
-        <q-title :level="2">包管理器 <span style="font-size: 16px; opacity: 0.75;">推荐</span></q-title>
+        <q-title :level="2">{{ $t("h2#1") }} <span style="font-size: 16px; opacity: 0.75;">{{ $t('recommand') }}</span></q-title>
 
-        <q-text colorful>
-            通过包管理器和构建工具可以更方便的维护项目，以 NPM 包管理器为例：通过命令 <strong>npm install --save @qiqi1996/qi-design-vue</strong> 将组件库安装并保存依赖。然后，使用下列代码在项目的入口文件中引入并注册组件库。
+        <q-text colorful v-html="$t('h2#1-p#1')">
         </q-text>
 
         <codeblock lang="javascript">

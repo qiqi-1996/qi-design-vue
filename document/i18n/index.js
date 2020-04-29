@@ -16,6 +16,4 @@ function parse(json, scope) {
 
 parse(common, "common");
 
-console.log(result);
-
 export default result;

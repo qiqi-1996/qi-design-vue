@@ -1,5 +1,5 @@
 <template>
-    <div ref="item" :class="className" @click="duang"><slot></slot></div>
+    <div ref="item" :class="className" @click="duang"><slot>{{text}}</slot></div>
 </template>
 
 <style lang="less" scoped>
@@ -70,6 +70,11 @@ export default {
         },
         text: String,
         disable: Boolean
+    },
+    watch: {
+        text(newValue){
+            this.scope.handleItemChange(true);
+        }
     },
     data(){
         return {

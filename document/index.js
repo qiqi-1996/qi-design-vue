@@ -27,15 +27,14 @@ const router = new VueRouter({
     base: location.pathname
 })
 
-const i18n = new VueI18N({
+store.i18n = new VueI18N({
     locale: "zh-CN",
+    silentFallbackWarn: true,
     messages
 })
 
-console.log(i18n);
-
 const app = new Vue({
-    i18n,
+    i18n: store.i18n,
     router,
     components: {
         root,

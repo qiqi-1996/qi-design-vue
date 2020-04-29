@@ -59,7 +59,7 @@
     // Templates
 
     "Document Template": {
-        "scope": "html,vue",
+        "scope": "vue",
         "prefix": ["document-template", "dt"],
         "body": [
             "<template>",
@@ -75,5 +75,10 @@
             "\t</document>",
             "</template>",
         ]
+    },
+    "i18n": {
+        "scope": "vue",
+        "prefix": ["i18n"],
+        "body": ["<i18n src=\"./i18n.json\"></i18n>"]
     }
 }

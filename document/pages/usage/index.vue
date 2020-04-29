@@ -1,5 +1,6 @@
+<i18n src="./i18n.json"></i18n>
 <template>
-    <side-router :data="data"></side-router>
+    <side-router :data="data" :i18n="$t.bind(this)"></side-router>
 </template>
 
 <script>
@@ -14,11 +15,11 @@ export default {
             data: [
                 {
                     type: "category",
-                    title: "快速上手"
+                    title: "quick-start"
                 },
                 {
                     to: "/usage/install",
-                    title: "安装和使用",
+                    title: "install",
                     imageLight: require("./icons/install_light.png"),
                     imageDark: require("./icons/install_dark.png"),
                 },
@@ -32,29 +33,29 @@ export default {
                 },
                 {
                     type: "category",
-                    title: "输入类组件"
+                    title: "type-of-input"
                 },
                 {
                     to: "/usage/radio",
-                    title: "单选框",
+                    title: "radio",
                     imageLight: require("./icons/radio_light.png"),
                     imageDark: require("./icons/radio_dark.png"),
                 },
                 {
                     to: "/usage/checkbox",
-                    title: "复选框",
+                    title: "checkbox",
                     imageLight: require("./icons/checkbox_light.png"),
                     imageDark: require("./icons/checkbox_dark.png"),
                 },
                 {
                     to: "/usage/switch",
-                    title: "开关",
+                    title: "switch",
                     imageLight: require("./icons/switch_light.png"),
                     imageDark: require("./icons/switch_dark.png"),
                 },
                 {
                     to: "/usage/input",
-                    title: "输入框",
+                    title: "input",
                     imageLight: require("./icons/input_light.png"),
                     imageDark: require("./icons/input_dark.png"),
                 },
@@ -72,25 +73,25 @@ export default {
                 },
                 {
                     type: "category",
-                    title: "交互类组件"
+                    title: "type-of-interaction"
                 },
                 {
                     to: "/usage/button",
-                    title: "按钮",
+                    title: "button",
                     imageLight: require("./icons/button_light.png"),
                     imageDark: require("./icons/button_dark.png"),
                 },
                 {
                     to: "/usage/tab",
-                    title: "选项卡",
+                    title: "tab",
                     imageLight: require("./icons/tab_light.png"),
                     imageDark: require("./icons/tab_dark.png"),
                 },
                 // {
-                    // to: "/usage/menu",
-                    // title: "菜单",
-                    // imageLight: require("./icons/menu_light.png"),
-                    // imageDark: require("./icons/menu_dark.png"),
+                //     to: "/usage/menu",
+                //     title: "menu",
+                //     // imageLight: require("./icons/menu_light.png"),
+                //     // imageDark: require("./icons/menu_dark.png"),
                 // },
                 // {
                 //     to: "/usage/tree",
@@ -106,47 +107,47 @@ export default {
                 },
                 {
                     type: "category",
-                    title: "呈现类组件"
+                    title: "type-of-display"
                 },
                 {
                     to: "/usage/theme",
-                    title: "主题",
+                    title: "theme",
                     imageLight: require("./icons/theme_light.png"),
                     imageDark: require("./icons/theme_dark.png"),
                 },
                 {
                     to: "/usage/panel",
-                    title: "面板",
+                    title: "panel",
                     imageLight: require("./icons/panel_light.png"),
                     imageDark: require("./icons/panel_dark.png"),
                 },
                 {
                     to: "/usage/typography",
-                    title: "文字排版",
+                    title: "typography",
                     imageLight: require("./icons/typography_light.png"),
                     imageDark: require("./icons/typography_dark.png"),
                 },
                 {
                     to: "/usage/icon",
-                    title: "图标",
+                    title: "icon",
                     imageLight: require("./icons/icon_light.png"),
                     imageDark: require("./icons/icon_dark.png"),
                 },
                 {
                     to: "/usage/badge",
-                    title: "徽章",
+                    title: "badge",
                     imageLight: require("./icons/badge_light.png"),
                     imageDark: require("./icons/badge_dark.png"),
                 },
                 {
                     to: "/usage/divider",
-                    title: "分割线",
+                    title: "divider",
                     imageLight: require("./icons/divider_light.png"),
                     imageDark: require("./icons/divider_dark.png"),
                 },
                 {
                     to: "/usage/progress",
-                    title: "进度条",
+                    title: "progress",
                     imageLight: require("./icons/progress_light.png"),
                     imageDark: require("./icons/progress_dark.png"),
                 }

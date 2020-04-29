@@ -1,0 +1,50 @@
+{
+    "en": {
+        "quick-start": "Quick Start",
+        "install": "Install and Usage",
+
+        "type-of-input": "Inputs",
+        "radio": "Radio",
+        "checkbox": "Checkbox",
+        "switch": "Switch",
+        "input": "Input",
+
+        "type-of-interaction": "Interactions",
+        "button": "Button",
+        "tab": "Tab",
+        "menu": "Menu",
+
+        "type-of-display": "Display",
+        "theme": "Theme",
+        "panel": "Panel",
+        "typography": "Typography",
+        "icon": "Icon",
+        "badge": "Badge",
+        "divider": "Divider",
+        "progress": "Progress"
+    },
+    "zh-CN": {
+        "quick-start": "快速上手",
+        "install": "安装和使用",
+
+        "type-of-input": "输入类组件",
+        "radio": "单选框",
+        "checkbox": "复选框",
+        "switch": "开关",
+        "input": "输入框",
+
+        "type-of-interaction": "交互类组件",
+        "button": "按钮",
+        "tab": "选项卡",
+        "menu": "菜单",
+
+        "type-of-display": "呈现类组件",
+        "theme": "主题",
+        "panel": "面板",
+        "typography": "文字排版",
+        "icon": "图标",
+        "badge": "徽章",
+        "divider": "分割线",
+        "progress": "进度条"
+    }
+}
