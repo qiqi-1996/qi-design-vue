@@ -8,6 +8,18 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.1.2</q-title>
+            <q-footnote>2020-04-29</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 i18N 功能入口</li>
+                <li>新增 英语 翻译（部分）：导航栏、组件使用列表、通用词汇</li>
+                <q-title :level="3">变更</q-title>
+                <li>Tab 组件增加 text 属性，供不需要自定义 Tab 呈现的情景使用。Text 内容变更时可自动重新定位指示器的位置。</li>
+            </ul>
+
+            <q-divider></q-divider>
+            
             <q-title :level="1" colorful>Version 0.1.1</q-title>
             <q-footnote>2020-04-28</q-footnote>
             <ul>

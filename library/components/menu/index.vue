@@ -8,7 +8,9 @@
         <div class="q-menu-wrapper">
             <transition name="show">
                 <q-panel border v-if="open">
-                    <q-menu _item
+                    <q-menu
+                        _item
+                        :_root="config.root"
                         v-for="(item, index) in data"
                         :key="index"
                         :data="item"
@@ -21,8 +23,15 @@
     </div>
     <span v-else :class="className('q-menu-item')">
         <!-- 菜单项 -->
-        <q-menu :data="data.children" :open="control.open" position="right" :size="size">
-            <q-hover :hover="config.hover" @mouseenter.native="doControlOpen">
+        <q-menu
+            :_root="config.root"
+            :data="data.children"
+            :open="control.open"
+            position="right" 
+            :size="size"
+            :value="data.value"
+        >
+            <q-hover :hover="config.hover" @mouseenter.native="doControlOpen" @click="handleClick">
                 <q-icon class="item-icon" v-show="data.icon" :name="data.icon"></q-icon>
                 <span class="item-text">{{data.text}}</span>
                 <span class="item-note" v-show="data.note" :style="{ marginRight: data.children?'16px':'0px'}">{{data.note}}</span>
@@ -37,10 +46,19 @@
 
 .q-menu-container {
     position: relative;
+    text-align: left;
 }
 
 .q-menu-wrapper {
     position: absolute;
+}
+
+.q-menu-container[class*="full"] {
+    display: inline-block;
+    
+    .q-menu-wrapper {
+        width: 100%;
+    }
 }
 
 /******* Position *******/
@@ -179,13 +197,14 @@ import utils from "@/core/utils.js";
 
 const hover = {
     border: "none",
-    color: "inherit"
+    color: "default"
 }
 
 export default {
     mixins: [mixins],
     props: {
         open: Boolean,
+        full: Boolean,
         data: {},
         size: {
             type: String,
@@ -216,6 +235,7 @@ export default {
         },
 
         _item: Boolean,
+        _root: {},
     },
     mounted(){
         let id = this.$parent.meta?.id;
@@ -239,7 +259,10 @@ export default {
                 name: "menu",
             },
             config: {
-                hover
+                hover,
+                root: (()=>{
+                    return this._root || this;
+                })()
             },
             control: {
                 open: false
@@ -252,6 +275,7 @@ export default {
                 [extra]: true,
                 "position": this.position,
                 "size": this.size,
+                "full": this.full,
             });
         },
         doControlOpen(){
@@ -265,6 +289,11 @@ export default {
             this.$nextTick(()=>{
                 callback && callback();
             })
+        },
+        handleClick(){
+            this.config.root.$emit("select", {
+                value: this.data.value
+            });
         }
     }
 }

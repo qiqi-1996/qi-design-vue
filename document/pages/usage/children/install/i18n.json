@@ -1,8 +1,16 @@
 {
     "en": {
-        "Install": "Install and Usage"
+        "h1#1": "Install and Usage",
+        "recommand": "Recommand",
+        
+        "h2#1": "Package Manager",
+        "h2#1-p#1": "It is easier to maintain the project through the package manager and build tools. Take the NPM package manager as an example: install and save the component library through the command <strong>npm install --save @ qiqi1996/qi-design-vue</strong> rely. Then, use the following code to import and register the component library in the entry file of the project."
     },
     "zh-CN": {
-        "Install": "安装和使用"
+        "h1#1": "安装和使用",
+        "recommand": "推荐",
+
+        "h2#1": "包管理器",
+        "h2#1-p#1": "通过包管理器和构建工具可以更方便的维护项目，以 NPM 包管理器为例：通过命令 <strong>npm install --save @qiqi1996/qi-design-vue</strong> 将组件库安装并保存依赖。然后，使用下列代码在项目的入口文件中引入并注册组件库。"
     }
 }

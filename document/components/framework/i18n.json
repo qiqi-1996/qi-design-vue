@@ -1,0 +1,20 @@
+{
+    "en": {
+        "summary": "Summary",
+        "usage": "Components Usage",
+        "designer": "For Designer",
+        "developer": "For Developer",
+        "resource": "Design Resource",
+        "update": "Change Log",
+        "development": "Development Tool"
+    },
+    "zh-CN": {
+        "summary": "简介",
+        "usage": "组件使用",
+        "designer": "写给设计师",
+        "developer": "写给开发者",
+        "resource": "设计资源",
+        "update": "更新日志",
+        "development": "开发环境工具"
+    }
+}

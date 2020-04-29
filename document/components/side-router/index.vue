@@ -9,7 +9,7 @@
                     </div>
 
                     <div v-else-if="item.type === 'category'">
-                        <q-footnote class="router-category">{{item.title}}</q-footnote>
+                        <q-footnote class="router-category">{{i18n(item.title)}}</q-footnote>
                     </div>
 
                     <div v-else class="router-link" @click="handleClickRouterLink(item, index)">
@@ -17,7 +17,9 @@
                             :active="isActive(item.to)"
                             :image-light="item.imageLight"
                             :image-dark="item.imageDark"
-                        >{{item.title}}</item>
+                        >
+                        {{i18n(item.title)}}
+                        </item>
                     </div>
 
                 </div>
@@ -139,7 +141,12 @@ export default {
         item
     },
     props: {
-        data: Array
+        data: Array,
+        i18n: {
+            default: ()=>function(value){
+                return value;
+            }
+        }
     },
     data(){
         return {

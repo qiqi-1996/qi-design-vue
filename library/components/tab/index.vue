@@ -220,7 +220,7 @@ export default {
                 this.handleItemChange(options);
             }
         },
-        handleItemChange(){
+        handleItemChange(forceMove){
             if(this.timeoutID){
                 clearTimeout(this.timeoutID);
             }
@@ -234,6 +234,8 @@ export default {
                 }
                 if(!this.current){
                     this.moveIndicator(this.tabs[Object.keys(this.tabs)[0]], false);
+                }else if(forceMove){
+                    this.moveIndicator(this.current, false);
                 }
             })
         },
