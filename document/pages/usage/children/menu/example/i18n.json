@@ -1,0 +1,40 @@
+{
+    "en": {
+        "title": "Fake Application",
+        "menu-file": "File",
+        "menu-edit": "Edit",
+        "menu-help": "Help",
+
+        "menu-file-new": "New",
+        "menu-file-open": "Open",
+        "menu-file-openrecent": "Open Recent",
+        "menu-file-openrecent-clear": "Clear History",
+        "menu-file-exit": "Exit",
+
+        "menu-edit-undo": "Undo",
+        "menu-edit-redo": "Redo",
+        "menu-edit-copy": "Copy",
+        "menu-edit-cut": "Cut",
+        "menu-edit-paste": "Paste",
+        "description": "Here is the effect you can achieve with the Menu component. I added some code to implement the so-called \"menu bar\" for most applications (but the Menu component is not the overall menu bar). Because I hope it can be attached to most elements, for example:"
+    },
+    "zh-CN": {
+        "title": "假装这是一个应用",
+        "menu-file": "文件",
+        "menu-edit": "编辑",
+        "menu-help": "帮助",
+
+        "menu-file-new": "新建",
+        "menu-file-open": "打开",
+        "menu-file-openrecent": "最近打开",
+        "menu-file-openrecent-clear": "清除历史记录",
+        "menu-file-exit": "退出",
+        
+        "menu-edit-undo": "撤销",
+        "menu-edit-redo": "重做",
+        "menu-edit-copy": "复制",
+        "menu-edit-cut": "剪切",
+        "menu-edit-paste": "粘贴",
+        "description": "此处为您呈现了 Menu 组件可以实现的效果，我们增加了些许代码来实现大部分应用所谓的”菜单栏“（但是 Menu 组件并不是整体的菜单栏）。因为我希望它可以依附于大部分元素上，例如："
+    }
+}

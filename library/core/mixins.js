@@ -110,7 +110,9 @@ export default {
             return p;
         },
         setVvalue(value) {
-            this.vvalue = value;
+            if (this.vvalue !== undefined) {
+                this.vvalue = value;
+            }
             let event = this.meta.model?.event || "input";
             this.$emit(event, value);
         },

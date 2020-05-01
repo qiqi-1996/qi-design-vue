@@ -88,7 +88,9 @@ switch (START_MODE) {
 
             fs.copyFileSync(__dirname + "/design/Qi Design Standard.sketch", __dirname + "/dist/document/qi-design-standard.sketch")
             fs.copyFileSync(__dirname + "/README.md", __dirname + "/dist/library/README.md");
-            fs.copyFileSync(__dirname + "/README.md", __dirname + "/dist/document/README.md");
+            fs.mkdirSync(__dirname + "/dist/library/.readme");
+            fs.copyFileSync(__dirname + "/.readme/darkmode.png", __dirname + "/dist/library/.readme/darkmode.png");
+            fs.copyFileSync(__dirname + "/.readme/header.png", __dirname + "/dist/library/.readme/header.png");
 
             console.log("> 正在打包编译结果");
 

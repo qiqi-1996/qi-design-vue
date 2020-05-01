@@ -46,10 +46,6 @@ export default {
         filename: "[name].js",
         chunkFilename: "[name].js",
     },
-    externals: {
-        "vue": "Vue",
-        "vue-router": "VueRouter",
-    },
     resolve: {
         alias: {
             "@": env.PATH_LIBRARY,

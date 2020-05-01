@@ -2,37 +2,43 @@
     <span v-if="!data">
         <slot></slot>
     </span>
-    <div v-else-if="!_item" :class="className('q-menu-container')" :style="{ zIndex: open?1:0}">
+    <div v-else-if="!_item" :class="className('q-menu-container')" :style="{ zIndex: shouldOpen?1:0}" @click.stop="">
         <!-- 包裹层 -->
         <slot></slot>
         <div class="q-menu-wrapper">
-            <transition name="show">
-                <q-panel border v-if="open">
+            <!-- <transition name="show"> -->
+            <!-- Transition 导致了意外的渲染错误，暂时去除 -->
+                <q-panel border v-if="shouldOpen">
                     <q-menu
                         _item
                         :_root="config.root"
                         v-for="(item, index) in data"
+                        :_haveIcon="state.haveIcon"
+                        :_haveExpand="state.haveExpand"
                         :key="index"
                         :data="item"
                         :size="size"
                     >
                     </q-menu>
                 </q-panel>
-            </transition>
+            <!-- </transition> -->
         </div>
     </div>
     <span v-else :class="className('q-menu-item')">
         <!-- 菜单项 -->
+        <component v-if="data.is" :is="data.is"></component>
         <q-menu
+            v-else
             :_root="config.root"
+            :_values="_values.concat([data.value])"
             :data="data.children"
             :open="control.open"
             position="right" 
             :size="size"
             :value="data.value"
         >
-            <q-hover :hover="config.hover" @mouseenter.native="doControlOpen" @click="handleClick">
-                <q-icon class="item-icon" v-show="data.icon" :name="data.icon"></q-icon>
+            <q-hover :hover="config.hover" @mouseenter.native="doControlOpen" @click="handleSelected" :style="{ paddingRight: _haveExpand?'32px':''}">
+                <q-icon class="item-icon" v-show="_haveIcon" :name="data.icon"></q-icon>
                 <span class="item-text">{{data.text}}</span>
                 <span class="item-note" v-show="data.note" :style="{ marginRight: data.children?'16px':'0px'}">{{data.note}}</span>
                 <q-icon class="item-expand" name="right" v-show="data.children"></q-icon>
@@ -149,7 +155,6 @@
 }
 
 .q-menu-item {
-
     position: relative;
     white-space: nowrap;
 
@@ -159,6 +164,7 @@
     }
 
     .item-icon { 
+        width: 14px;
         margin-right: @grid;
         vertical-align: bottom;
     }
@@ -166,15 +172,25 @@
     .item-note {
         margin-left: @grid;
         // margin-right: 2*@grid;
+        text-align: right;
         opacity: 0.5;
     }
 
     .item-expand {
         position: absolute;
+        float: right;
+        clear: both;
         right: 0px;
         margin-top: 3px;
         margin-right: @grid;
         opacity: 0.5;
+    }
+}
+
+.q-menu-item[class*="size-small"] {
+    .item-expand {
+        .font-note();
+        margin-top: 1px;
     }
 }
 
@@ -194,6 +210,7 @@
 <script>
 import mixins from "@/core/mixins.js";
 import utils from "@/core/utils.js";
+import cloneDeep from "lodash/cloneDeep";
 
 const hover = {
     border: "none",
@@ -202,9 +219,14 @@ const hover = {
 
 export default {
     mixins: [mixins],
+    model: {
+        prop: "open",
+        event: "change"
+    },
     props: {
-        open: Boolean,
+        open: {},
         full: Boolean,
+        value: {},
         data: {},
         size: {
             type: String,
@@ -235,21 +257,12 @@ export default {
         },
 
         _item: Boolean,
+        _haveIcon: Boolean,
+        _haveExpand: Boolean,
         _root: {},
-    },
-    mounted(){
-        let id = this.$parent.meta?.id;
-        id && utils.event.on(`q-menu-close-${id}`, this.doControlClose);
-    },
-    beforeDestroy(){
-        let id = this.$parent.meta?.id;
-        id && utils.event.off(`q-menu-close-${id}`, this.doControlClose);
-    },
-    watch:{
-        open(value){
-            if(!value && this.control?.open){
-                this.control.open = false;
-            }
+        _values: {
+            type: Array,
+            default: ()=>[]
         }
     },
     data(){
@@ -257,6 +270,10 @@ export default {
             meta: {
                 id: null,
                 name: "menu",
+                model: {
+                    prop: "open",
+                    event: "change"
+                },
             },
             config: {
                 hover,
@@ -264,8 +281,56 @@ export default {
                     return this._root || this;
                 })()
             },
+            state: {
+                haveIcon: false,
+                haveExpand: false,
+            },
             control: {
                 open: false
+            }
+        }
+    },
+    watch:{
+        open(value){
+            if(typeof value === "boolean"){
+                this.control.open = value;
+            }
+            if(!this._item && this.data && Array.isArray(this.data)){
+                for(let i in this.data){
+                    if(this.data[i].icon){
+                        this.state.haveIcon = true;
+                    }
+                    if(this.data[i].children && Array.isArray(this.data[i].children)){
+                        this.state.haveExpand = true;
+                    }
+                }
+            }
+        }
+    },
+    mounted(){
+        let id = this.$parent.meta?.id;
+        id && utils.event.on(`q-menu-close-${id}`, this.doControlClose);
+
+        if(!this._root){
+            utils.event.on("q-menu-close", this.doFullyClose);
+            document.addEventListener("click", this.doFullyClose);
+        }
+    },
+    beforeDestroy(){
+        let id = this.$parent.meta?.id;
+        id && utils.event.off(`q-menu-close-${id}`, this.doControlClose);
+    },
+    computed: {
+        shouldOpen(){
+            if(!this._root){
+                // 如果 _root prop 为空，则表示自身是根菜单
+                if(typeof this.open === "boolean"){
+                    return this.open;
+                }else{
+                    return (this.open === this.value)
+                }
+            }else{
+                return this.control.open;
             }
         }
     },
@@ -279,10 +344,12 @@ export default {
             });
         },
         doControlOpen(){
-            let id = this.$parent.meta?.id;
-            id && utils.event.emit(`q-menu-close-${id}`, ()=>{
-                this.control.open = true;
-            })
+            // if(this.data.children){
+                let id = this.$parent.meta?.id;
+                id && utils.event.emit(`q-menu-close-${id}`, ()=>{
+                    this.control.open = true;
+                })
+            // }
         },
         doControlClose(callback){
             this.control.open = false;
@@ -290,10 +357,29 @@ export default {
                 callback && callback();
             })
         },
-        handleClick(){
-            this.config.root.$emit("select", {
-                value: this.data.value
+        doFullyClose(callback){
+            if(typeof this.open === "boolean"){
+                this.setVvalue(false);
+            }else{
+                this.setVvalue("");
+            }
+            this.$nextTick(()=>{
+                callback && typeof callback === "function" && callback();
+            })
+        },
+        handleSelected(){
+            if(this.data.children){
+                return;
+            }
+
+            let result = cloneDeep(this.data);
+
+            result = Object.assign(result, {
+                valueChain: this._values.concat(this.data.value)
             });
+
+            this.config.root.$emit("select", result);
+            this._root.doFullyClose();
         }
     }
 }

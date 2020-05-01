@@ -1,10 +1,10 @@
 {
     "en": {
         "usage": {
-            "usage": "usage",
-            "preview": "preview",
-            "property": "property",
-            "events": "events"
+            "usage": "Usage",
+            "preview": "Preview",
+            "property": "Property",
+            "events": "Events"
         }
     },
     "zh-CN": {

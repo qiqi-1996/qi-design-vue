@@ -90,6 +90,13 @@ const linear = [
     "download",
     "forbidden",
     "open",
+    "code",
+
+    // 社交元素
+
+    "smile",
+    "calm",
+    "sad",
 
     // 其他
     "dot",
@@ -112,6 +119,7 @@ const surface = [
 
     // 杂项
     "earth",
+    "shirt",
 ]
 
 export default {

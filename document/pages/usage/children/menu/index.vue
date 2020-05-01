@@ -6,72 +6,89 @@
 
         <q-title :level="2">{{$t("common.usage.preview")}}</q-title>
 
-        <window>
-            <q-menu :data="menuData" :open="menuOpen" size="normal">
-                <q-button @click="toggleMenuOpen">打开菜单</q-button>
-            </q-menu>
-        </window>
+        <example></example>
+
+        <q-title :level="2">{{$t("common.usage.usage")}}</q-title>
+
+        <q-footnote>请点击上方窗口的 "查看源码"</q-footnote>
+
+        <q-title :level="2">{{$t("common.usage.property")}}</q-title>
+
+        <property-block>
+
+            <property-item
+                name="data"
+                definition="菜单数据"
+                values="Object（详见 Data 详解）"
+            >
+            </property-item>
+
+            <property-item
+                name="open"
+                definition="是否打开菜单（v-model）"
+                defaults="false"
+                values="Boolean | String"
+            ></property-item>
+
+            <property-item
+                name="size"
+                definition="菜单大小"
+                defaults="normal"
+                :values="['small', 'normal']"
+            ></property-item>
+
+            <property-item
+                name="full"
+                definition="菜单宽度是否与被包裹的元素等宽"
+                values="Boolean"
+            ></property-item>
+
+        </property-block>
+
+        <q-title :level="2">{{$t("common.usage.property")}} : Data</q-title>
+
+        <codeblock lang="javascript">
+            {
+                text: String
+                // 菜单标题
+
+                value: String
+                // 菜单标识 ID
+
+                icon: String
+                // 菜单 Icon
+                
+                note: String
+                // 菜单附注
+
+                is: Vue Components
+                // 使用 &lt;component :is=&quot;is&quot;&gt;&lt;/component&gt; 呈现内容
+
+                children: [ {} ...]
+                // 子菜单，数组成员与本对象的结构一致
+
+            }
+        </codeblock>
+
+        <q-title :level="2">{{$t("common.usage.events")}}</q-title>
+
+        <event-block>
+            <event-item
+                name="select"
+                definition="当菜单项被点击选择"
+                values="data - 该参数内容等同于当前被选择的菜单项的 data { text, value, icon ... } 对象"
+            ></event-item>
+        </event-block>
 
     </document>
 </template>
 
 <script>
+import example from "./example/index.vue";
+
 export default {
-    data(){
-        return {
-            menuOpen: false,
-            menuData: [
-                {
-                    text: "Menu Item 1",
-                    icon: "folder",
-                    note: "⌘1",
-                },
-                {
-                    text: "Menu Item 2",
-                    children: [
-                        {
-                            text: "Submenu 1",
-                            children: [
-                                { text: "Submenu 1" },
-                                { text: "Submenu 2" },
-                                { text: "Submenu 3" },
-                            ]
-                        },
-                        {
-                            text: "Submenu 2",
-                            children: [
-                                { text: "Submenu 1" },
-                                { text: "Submenu 2" },
-                                { text: "Submenu 3" },
-                            ]
-                        },
-                        {
-                            text: "Submenu 3",
-                            children: [
-                                { text: "Submenu 1" },
-                                { text: "Submenu 2" },
-                                { 
-                                    text: "Submenu 3",
-                                    children: [
-                                        { text: "Submenu 1" },
-                                        { text: "Submenu 2" },
-                                        { text: "Submenu 3" },
-                                    ]
-                                },
-                            ]
-                        },
-                    ]
-                },
-                {
-                    text: "Menu Item 3"
-                },
-            ]
-        }
-    },
-    methods: {
-        toggleMenuOpen(){
-            this.menuOpen = !this.menuOpen;
-        }
+    components: {
+        example
     }
 }
 </script>

@@ -87,12 +87,12 @@ export default {
                     imageLight: require("./icons/tab_light.png"),
                     imageDark: require("./icons/tab_dark.png"),
                 },
-                // {
-                //     to: "/usage/menu",
-                //     title: "menu",
-                //     // imageLight: require("./icons/menu_light.png"),
-                //     // imageDark: require("./icons/menu_dark.png"),
-                // },
+                {
+                    to: "/usage/menu",
+                    title: "menu",
+                    imageLight: require("./icons/menu_light.png"),
+                    imageDark: require("./icons/menu_dark.png"),
+                },
                 // {
                 //     to: "/usage/tree",
                 //     title: "树形控件",
