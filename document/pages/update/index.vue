@@ -8,8 +8,17 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.2.1</q-title>
+            <q-footnote>2020-05-02</q-footnote>
+            <ul>
+                <q-title :level="3">修复</q-title>
+                <li>修复 Checkbox 组件的数据问题</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.2.0</q-title>
-            <q-footnote>2020-04-29</q-footnote>
+            <q-footnote>2020-05-01</q-footnote>
             <ul>
                 <q-title :level="3">新增</q-title>
                 <li>新增 Menu 组件</li>

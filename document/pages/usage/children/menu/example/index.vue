@@ -124,21 +124,24 @@ export default {
             this.menuFile = [
                 {
                     text: this.$t("menu-file-new"),
+                    value: "menu-file-new",
                     icon: "document",
                     note: "Ctrl + N",
                 },
                 {
                     text: this.$t("menu-file-open"),
+                    value: "menu-file-open",
                     note: "Ctrl + O",
                 },
                 {
                     text: this.$t("menu-file-openrecent"),
+                    value: "menu-file-openrecent",
                     note: "3",
                     children: [
-                        { text: "index.vue" },
-                        { text: "button.vue" },
+                        { text: "index.vue" , value: "index.vue"},
+                        { text: "button.vue" , value: "button.vue"},
                         { is: "q-divider" },
-                        { icon: "trash", text: this.$t("menu-file-openrecent-clear") }
+                        { icon: "trash", text: this.$t("menu-file-openrecent-clear"),  value: "menu-file-openrecent-clear" }
                     ]
                 },
                 {

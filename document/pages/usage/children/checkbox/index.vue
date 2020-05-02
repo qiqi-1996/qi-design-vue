@@ -9,7 +9,7 @@
                 <q-checkbox value="A" default>Checkbox A</q-checkbox>
                 <q-checkbox value="B">Checkbox B</q-checkbox>
                 <q-checkbox value="C">Checkbox C</q-checkbox>
-                <q-checkbox value="C" disable>Checkbox D</q-checkbox>
+                <q-checkbox value="D" disable>Checkbox D</q-checkbox>
                 <q-footnote>您的选择是：</q-footnote>
                 <q-panel class="chosen" border v-for="(item, index) in checkbox" :key="index">{{item}}</q-panel>
             </q-form-group>
@@ -22,7 +22,7 @@
                 &lt;q-checkbox value=&quot;A&quot; default&gt;Checkbox A&lt;/q-checkbox&gt;
                 &lt;q-checkbox value=&quot;B&quot;&gt;Checkbox B&lt;/q-checkbox&gt;
                 &lt;q-checkbox value=&quot;C&quot;&gt;Checkbox C&lt;/q-checkbox&gt;
-                &lt;q-checkbox value=&quot;C&quot; disable&gt;Checkbox D&lt;/q-checkbox&gt;
+                &lt;q-checkbox value=&quot;D&quot; disable&gt;Checkbox D&lt;/q-checkbox&gt;
             &lt;/q-form-group&gt;
         </codeblock>
 

@@ -18,7 +18,9 @@ export default {
         if (this.vvalue !== undefined) {
             let prop = this.meta?.model?.prop || "value";
             this.$watch(prop, (newValue) => {
-                this.vvalue = newValue;
+                if (newValue) {
+                    this.vvalue = newValue;
+                }
             }, {
                 immediate: true
             });

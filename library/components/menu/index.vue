@@ -30,7 +30,6 @@
         <q-menu
             v-else
             :_root="config.root"
-            :_values="_values.concat([data.value])"
             :data="data.children"
             :open="control.open"
             position="right" 
@@ -373,10 +372,6 @@ export default {
             }
 
             let result = cloneDeep(this.data);
-
-            result = Object.assign(result, {
-                valueChain: this._values.concat(this.data.value)
-            });
 
             this.config.root.$emit("select", result);
             this._root.doFullyClose();

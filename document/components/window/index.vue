@@ -113,7 +113,7 @@ export default {
     },
     methods: {
         openLink(){
-            let url = `https://github.com/qiqi-1996/qi-design-vue/blob/master/usage/children/${this.source}/example/index.vue`;
+            let url = `https://github.com/qiqi-1996/qi-design-vue/blob/master/document/pages/usage/children/${this.source}/example/index.vue`;
             window.open(url);
         }
     }

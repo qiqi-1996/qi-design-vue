@@ -53,7 +53,7 @@
                 // 菜单标题
 
                 value: String
-                // 菜单标识 ID
+                // 菜单标识值
 
                 icon: String
                 // 菜单 Icon
