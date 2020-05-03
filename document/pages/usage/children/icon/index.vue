@@ -34,6 +34,15 @@
                 <q-icon name="waiting" animation="rotate" style="font-size: 24px;"></q-icon>
             </property-item>
 
+            <property-item
+                name="container"
+                definition="改变图标容器"
+                defaults="i"
+                values="String"
+            >
+                <q-icon container="a" href="#" name="earth">使用 &lt;a&gt; 进行包裹</q-icon>
+            </property-item>
+
         </property-block>
 
         <q-title :level="2">可用图标列表</q-title>

@@ -15,10 +15,11 @@ export default {
         if (!this.$props.theme || !this.$props.theme) {
             this.$data._themeNode = this.findThemeNode();
         }
+        // 关联 v-model prop 和 vvalue
         if (this.vvalue !== undefined) {
             let prop = this.meta?.model?.prop || "value";
             this.$watch(prop, (newValue) => {
-                if (newValue) {
+                if (newValue!==undefined) {
                     this.vvalue = newValue;
                 }
             }, {

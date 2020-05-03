@@ -134,6 +134,11 @@ export default {
             }
         }
     },
+    watch: {
+        "config.version"(val){
+            console.log(val);
+        }
+    },
     async mounted(){
 
         var that = this;

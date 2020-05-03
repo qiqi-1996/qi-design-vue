@@ -1,5 +1,5 @@
 <template>
-    <i :class="className"><slot></slot></i>
+    <component :is="container || 'i'" :class="className"><slot></slot></component>
 </template>
 
 <style lang="less" scoped>
@@ -13,13 +13,13 @@
     .transition();
 }
 
-.q-icon[class*="theme-light"][class*="color-poe"] {
-    color: @color-light-foreground;
-}
+// .q-icon[class*="theme-light"][class*="color-poe"] {
+//     color: @color-light-foreground;
+// }
 
-.q-icon[class*="theme-dark"][class*="color-poe"] {
-    color: @color-dark-foreground;
-}
+// .q-icon[class*="theme-dark"][class*="color-poe"] {
+//     color: @color-dark-foreground;
+// }
 
 .q-icon-colors(@colorname) {
     @varname: "color-@{colorname}";
@@ -64,6 +64,7 @@ export default {
     props: {
         type: String,
         name: String,
+        container: String,
         animation: {
             type: String,
             validator(value){
