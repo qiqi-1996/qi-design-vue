@@ -8,6 +8,15 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.2.3</q-title>
+            <q-footnote>2020-05-05</q-footnote>
+            <ul>
+                <q-title :level="3">变更</q-title>
+                <li>Progress 组件新增 animation 属性</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.2.2</q-title>
             <q-footnote>2020-05-03</q-footnote>
             <ul>

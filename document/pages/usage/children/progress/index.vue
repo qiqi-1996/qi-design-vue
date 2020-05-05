@@ -37,7 +37,7 @@
                 definition="格式化进度条数显，需提供一个返回字符串的函数，函数的第一个参数是为对象，包含属性：current-当前值, total-总体值, percent-百分比"
                 values="Function"
             >
-                <q-progress :current="current" :total="total" round :format="formator"></q-progress>
+                <q-progress :current="current" :total="total" :format="formator"></q-progress>
             </property-item>
 
             <property-item
@@ -56,6 +56,15 @@
                 values="Boolean"
             >
                 <q-progress :current="current" :total="total" round></q-progress>
+            </property-item>
+
+            <property-item
+                name="animation"
+                definition="是否启用动画。对于数值变更非常频繁（小于500ms）的进度，由于 transition 缓动而导致进度条更新不及时，可以使用此属性禁用动画效果。并且在如此高频变化的进度中，缺少动效也不会很明显。"
+                defaults="true"
+                values="Boolean"
+            >
+                <q-progress :current="current" :total="total" round :animation="false"></q-progress>
             </property-item>
         </property-block>
 

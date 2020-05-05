@@ -16,13 +16,17 @@
     .progress-value {
         position: relative;
         .font-note();
-        .transition();
     }
 
     .progress-bar {
         height: 100%;
         text-align: right;
         white-space: nowrap;
+    }
+}
+
+.q-progress[class*="animation"]{
+    .progress-bar, .progress-value {
         .transition();
     }
 }
@@ -134,7 +138,11 @@ export default {
             }
         },
         format: Function,
-        round: Boolean
+        round: Boolean,
+        animation: {
+            type: Boolean,
+            default: true
+        }
     },
     data(){
         return {
@@ -149,6 +157,7 @@ export default {
             return this.computeClass({
                 size: this.size,
                 round: this.round,
+                animation: this.animation,
                 "need-offset": (this.offset!==0)
             });
         },
