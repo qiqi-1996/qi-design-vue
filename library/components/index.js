@@ -1,6 +1,7 @@
 import QBadge from "./badge/index.vue";
 import QButton from "./button/index.vue";
 import QCheckbox from "./checkbox/index.vue";
+import QCollapse from "./collapse/index.vue";
 import QCollapseTransition from "./collapseTransition/index.vue";
 import QColorBlock from "./colorBlock/index.vue";
 import QDivider from "./divider/index.vue";
@@ -30,6 +31,7 @@ export default {
     QBadge,
     QButton,
     QCheckbox,
+    QCollapse,
     QCollapseTransition,
     QColorBlock,
     QDivider,

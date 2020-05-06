@@ -20,6 +20,11 @@ export default [
         component: ()=>import("./checkbox/index.vue"),
     },
     {
+        name: "collapse",
+        path: "collapse",
+        component: ()=>import("./collapse/index.vue"),
+    },
+    {
         name: "divider",
         path: "divider",
         component: ()=>import("./divider/index.vue"),
@@ -63,6 +68,11 @@ export default [
         name: "radio",
         path: "radio",
         component: ()=>import("./radio/index.vue"),
+    },
+    {
+        name: "settings",
+        path: "settings",
+        component: ()=>import("./settings/index.vue"),
     },
     {
         name: "switch",

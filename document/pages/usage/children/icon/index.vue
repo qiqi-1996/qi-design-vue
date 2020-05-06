@@ -95,11 +95,13 @@ const linear = [
     "link",
     "loading",
     "waiting",
-    "upload",
     "download",
+    "upload",
+    "correct",
     "forbidden",
     "open",
     "code",
+    "search",
 
     // 社交元素
 
@@ -115,16 +117,18 @@ const linear = [
 // 面性图标（可填充）
 const surface = [
     // 社交相关
+    "star",
     "user",
     "lock",
     "unlock",
-    "star",
 
     // 文件相关
-    "image",
     "folder",
+    "image",
     "trash",
     "document",
+    "copy",
+    "paste",
 
     // 杂项
     "earth",

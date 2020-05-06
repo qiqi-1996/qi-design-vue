@@ -82,6 +82,7 @@
 <script>
 import mixins from "@/core/mixins.js";
 import utils from "@/core/utils.js";
+import settings from "@/core/settings.js";
 
 export default {
     render(createElement){
@@ -96,7 +97,7 @@ export default {
         colorful: Boolean,
         mode: {
             type: String,
-            default: "normal",
+            default: ()=>(settings.defaults.title_mode || settings.defaults.typography_mode),
             validator(value){
                 return utils.validator(value).belongsTo("single", "compact", "normal")
             }

@@ -23,6 +23,12 @@ export default {
                     imageLight: require("./icons/install_light.png"),
                     imageDark: require("./icons/install_dark.png"),
                 },
+                {
+                    to: "/usage/settings",
+                    title: "settings",
+                    imageLight: require("./icons/settings_light.png"),
+                    imageDark: require("./icons/settings_dark.png"),
+                },
 
 
                 /******* 表单类组件 *******/
@@ -92,6 +98,12 @@ export default {
                     title: "menu",
                     imageLight: require("./icons/menu_light.png"),
                     imageDark: require("./icons/menu_dark.png"),
+                },
+                {
+                    to: "/usage/collapse",
+                    title: "collapse",
+                    imageLight: require("./icons/collapse_light.png"),
+                    imageDark: require("./icons/collapse_dark.png"),
                 },
                 // {
                 //     to: "/usage/tree",

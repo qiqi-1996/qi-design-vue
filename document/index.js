@@ -3,7 +3,7 @@ import "./index.less";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import VueI18N from "vue-i18n";
-import QUI from "@/index.js";
+import QiDesignVue, { settings } from "@/index.js";
 
 import routes from "./pages/routes.js";
 
@@ -12,7 +12,11 @@ import ComponentInstaller from "./components/install.js";
 import messages from "./i18n";
 import store from "./store";
 
-Vue.use(QUI);
+settings.defaults.typography_mode = "normal";
+
+console.log(settings);
+
+Vue.use(QiDesignVue);
 Vue.use(VueRouter);
 Vue.use(VueI18N);
 ComponentInstaller(Vue);

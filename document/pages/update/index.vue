@@ -8,6 +8,17 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.3.0</q-title>
+            <q-footnote>2020-05-06</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 Collapse 组件</li>
+                <li>新增 全局设置 功能（默认值）</li>
+                <li>新增 Icons</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.2.3</q-title>
             <q-footnote>2020-05-05</q-footnote>
             <ul>

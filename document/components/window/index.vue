@@ -38,6 +38,7 @@
         text-align: left;
         padding: 10px;
         font-size: 0px;
+        white-space: nowrap;
 
         .item {
             margin-right: 5px;

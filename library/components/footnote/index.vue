@@ -39,13 +39,14 @@
 <script>
 import mixins from "@/core/mixins.js";
 import utils from "@/core/utils.js";
+import settings from "@/core/settings.js";
 
 export default {
     mixins: [mixins],
     props: {
         mode: {
             type: String,
-            default: "normal",
+            default: ()=>(settings.defaults.footnote_mode || settings.defaults.typography_mode),
             validator(value){
                 return utils.validator(value).belongsTo("single", "compact", "normal")
             }

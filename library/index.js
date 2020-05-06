@@ -1,5 +1,6 @@
 import "./core/common.less";
 import components from "./components";
+import settings from "./core/settings.js";
 
 function install(Vue) {
     for (let key in components) {
@@ -8,3 +9,6 @@ function install(Vue) {
 }
 
 export default install;
+export {
+    settings
+}
