@@ -14,8 +14,6 @@ import store from "./store";
 
 settings.defaults.typography_mode = "normal";
 
-console.log(settings);
-
 Vue.use(QiDesignVue);
 Vue.use(VueRouter);
 Vue.use(VueI18N);
@@ -35,6 +33,14 @@ store.i18n = new VueI18N({
     locale: "zh-CN",
     silentFallbackWarn: true,
     messages
+})
+
+Vue.mixin({
+    data() {
+        return {
+            VERSION: __VERSION__
+        };
+    }
 })
 
 const app = new Vue({

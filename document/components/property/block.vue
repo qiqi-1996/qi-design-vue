@@ -1,18 +1,19 @@
+<i18n src="./property.i18n.json"></i18n>
 <template>
     <q-panel>
         <table class="property-block-container">
             <tr>
-                <th style="width: 80px;"><q-title mode="single" :level="4" colorful>属性名</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>释义</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>默认值</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>类型/可用值</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>示例</q-title></th>
+                <th style="width: 80px;"><q-title mode="single" :level="4" colorful>{{ $t("property") }}</q-title></th>
+                <th><q-title mode="single" :level="4" colorful>{{ $t("definition") }}</q-title></th>
+                <th><q-title mode="single" :level="4" colorful>{{ $t("defaults") }}</q-title></th>
+                <th><q-title mode="single" :level="4" colorful>{{ $t("type") }}</q-title></th>
+                <th><q-title mode="single" :level="4" colorful>{{ $t("example") }}</q-title></th>
             </tr>
             <slot></slot>
             <tr v-if="general" class="general" @click="toggleGeneral">
                 <th style="width: 80px;" colspan="4">
-                    <q-title mode="single" :level="4" colorful>通用属性</q-title>
-                    <q-footnote style="margin: 0px; margin-top: 8px;">可通过文档页面中的主题控制器，预览样式属性的不同效果</q-footnote>
+                    <q-title mode="single" :level="4" colorful>{{ $t("common") }}</q-title>
+                    <q-footnote style="margin: 0px; margin-top: 8px;">{{ $t("common-description") }}</q-footnote>
                 </th>
                 <th style="text-align: right;">
                     <q-icon name="right" :class="['general-expand', generalOpen?'active':'']"></q-icon>
@@ -21,20 +22,20 @@
             <property-item
                 v-if="general && generalOpen"
                 name="theme"
-                definition="主题模式，优先从父级继承。"
+                :definition="$t('common-theme')"
                 defaults="light"
                 :values="['light', 'dark']"
             >
-                <router-link class="link" to="/usage/theme">详见 Theme 组件<q-icon name="open"></q-icon></router-link>
+                <router-link class="link" to="/usage/theme">{{ $t("common-details") }}<q-icon name="open"></q-icon></router-link>
             </property-item>
             <property-item
                 v-if="general && generalOpen"
                 name="color"
-                definition="控件颜色，优先从父级继承。"
+                :definition="$t('common-color')"
                 defaults="poe"
                 :values="['poe', 'starrynight', 'enjolras', 'sunflower']"
             >
-                <router-link class="link" to="/usage/theme">详见 Theme 组件<q-icon name="open"></q-icon></router-link>
+                <router-link class="link" to="/usage/theme">{{ $t("common-details") }}<q-icon name="open"></q-icon></router-link>
             </property-item>
         </table>
     </q-panel>

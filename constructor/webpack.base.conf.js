@@ -87,6 +87,9 @@ export default {
                     outputPath: 'assets',
                     esModule: false
                 }
+            }, {
+                test: /\.(md)$/,
+                loader: "raw-loader"
             }
         ]
     },

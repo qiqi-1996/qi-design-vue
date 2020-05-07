@@ -1,11 +1,13 @@
 <template>
     <div :class="className">
         <div class="controller" v-show="title" @click="duang">
-            <q-title class="title" :level="titleLevel">{{title}}</q-title>
+            <q-title class="title" :level="titleLevel" :colorful="titleColorful">{{title}}</q-title>
             <q-icon class="indicator" name="right" container="q-footnote"></q-icon>
         </div>
         <div :class="['content', transition?'transition':'']" :style="contentStyle" @transitionend="handleTransitionEnd" ref="content">
-            <slot></slot>
+            <div :class="title?'content-margin':''">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -15,6 +17,8 @@
 
 .q-collapse {
     .controller {
+        padding: 2*@grid;
+        box-sizing: border-box;
         position: relative;
         cursor: pointer;
     }
@@ -24,14 +28,20 @@
     }
 
     .indicator {
+        margin: 0px;
         position: absolute;
-        right: 0px;
+        right: 2*@grid;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .transition {
         .transition();
+    }
+
+    .content-margin {
+        margin: 2*@grid;
+        margin-top: 0px;
     }
 }
 
@@ -57,6 +67,10 @@ export default {
         titleLevel: {
             type: Number,
             default: 3
+        },
+        titleColorful: {
+            type: Boolean,
+            default: false
         }
     },
     data(){
@@ -79,13 +93,16 @@ export default {
             if(val){
                 // Expand
                 this.transition = true;
-                this.$nextTick(()=>{
+                this.contentStyle.height = "0px";
+                setTimeout(()=>{
                     this.contentStyle.height = dom.scrollHeight + "px";
                 });
             }else{
                 // Collapse
                 this.transition = true;
-                this.$nextTick(()=>{
+                this.contentStyle.height = dom.clientHeight + "px";
+                this.contentStyle.overflow = "hidden";
+                setTimeout(()=>{
                     this.contentStyle.height = "0px";
                 });
             }
@@ -103,7 +120,7 @@ export default {
             this.setVvalue(!this.vvalue);
         },
         handleTransitionEnd(evt){
-            if(evt.target !== this.$refs["content"].$el){
+            if(evt.target !== this.$refs["content"]){
                 return;
             }
             this.transition = false;

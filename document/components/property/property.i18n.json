@@ -1,0 +1,28 @@
+{
+    "en": {
+        "property": "Property",
+        "definition": "Definition",
+        "defaults": "Default Value",
+        "type": "Type / Available",
+        "exmaple": "Example",
+
+        "common": "Common Properties",
+        "common-description": "You can preview the different effects of style properties through the theme controller",
+        "common-theme": "Theme mode, preferentially inherited from the parent.",
+        "common-color": "Control color, preferentially inherited from the parent.",
+        "common-details": "Checkout the Theme component"
+    },
+    "zh-CN": {
+        "property": "属性名",
+        "definition": "释义",
+        "defaults": "默认值",
+        "type": "类型/可用值",
+        "exmaple": "示例",
+
+        "common": "通用属性",
+        "common-description": "可通过文档页面中的主题控制器，预览样式属性的不同效果",
+        "common-theme": "主题模式，优先从父级继承。",
+        "common-color": "控件颜色，优先从父级继承。",
+        "common-theme-details": "详见 Theme 组件"
+    }
+}

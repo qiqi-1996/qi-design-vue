@@ -20,6 +20,18 @@ Created by iconfont
   />
     <missing-glyph />
     
+    <glyph glyph-name="align-justify" unicode="&#59004;" d="M864 112v-80h-312v80h312z m-392 0v-80H160v80h312z m392 208v-80H160v80h704z m0 208v-80h-312V528h312z m-392 0v-80H160V528h312z m392 208v-80H160V736h704z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="align-center" unicode="&#59005;" d="M688 112v-80H336v80h352z m176 208v-80H160v80h704z m-176 208v-80H336V528h352z m176 208v-80H160V736h704z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="align-right" unicode="&#59006;" d="M864 112v-80h-352v80h352z m0 208v-80H160v80h704z m0 208v-80h-352V528h352z m0 208v-80H160V736h704z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="align-left" unicode="&#59007;" d="M512 112v-80H160v80h352z m352 208v-80H160v80h704z m-352 208v-80H160V528h352z m352 208v-80H160V736h704z"  horiz-adv-x="1024" />
+
+    
     <glyph glyph-name="copy-fill" unicode="&#58999;" d="M864 656v-704H292v80h492V656h80z m-120 160v-744H160V653.04L322.5 816H744z m-160-464H320v-80h264v80z m0 160H320v-80h264V512z"  horiz-adv-x="1024" />
 
     

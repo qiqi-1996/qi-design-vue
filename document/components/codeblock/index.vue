@@ -12,7 +12,7 @@
 @import "~@/core/standard.less";
 
 .codeblock-container {
-    padding: 0px;
+    padding: 0px 3*@grid;
     margin-top: 3*@grid;
     margin-bottom: 3*@grid;
 }

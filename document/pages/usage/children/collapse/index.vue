@@ -29,7 +29,16 @@
             <property-item
                 name="title-level"
                 definition="标题等级，默认使用 3 级标题。"
+                defaults="3"
                 values="String"
+            >
+            </property-item>
+
+            <property-item
+                name="title-level"
+                definition="是否使用多彩标题"
+                defaults="false"
+                values="Boolean"
             >
             </property-item>
 

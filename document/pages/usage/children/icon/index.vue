@@ -102,6 +102,10 @@ const linear = [
     "open",
     "code",
     "search",
+    "align-left",
+    "align-center",
+    "align-right",
+    "align-justify",
 
     // 社交元素
 
