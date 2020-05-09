@@ -8,16 +8,17 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
-            <q-title :level="1" colorful>UNRELEASED</q-title>
-            <q-footnote>2020-05-07</q-footnote>
+            <q-title :level="1" colorful>Version 0.3.1</q-title>
+            <q-footnote>2020-05-09</q-footnote>
             <ul>
                 <q-title :level="3">新增</q-title>
                 <li>新增 Icons</li>
                 <q-title :level="3">修复</q-title>
                 <li>修复 Collapse 组件展开动效 BUG</li>
                 <q-title :level="3">变更</q-title>
+                <li>重新设计 首页 UI</li>
                 <li>针对 i18n 优化文档渲染组件</li>
-                <li>完善 Install、Global Settings 的英语翻译</li>
+                <li>完善 Summary、Install、Global Settings 的英语翻译</li>
                 <li>优化 Collapse 组件的内置样式，新增 title-colorful 属性，修改文档错误</li>
             </ul>
 

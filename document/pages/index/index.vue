@@ -1,142 +1,184 @@
+<i18n src="./index.i18n.json"></i18n>
+
 <template>
     <page>
-        <q-panel class="container">
-            <q-title class="title" :level="2" colorful>功能特性</q-title>
+        <div class="stage">
 
-            <q-panel border class="features feature-darkmode" @click="toggleDarkMode">
-                <q-image :src="require('./darkmode_light.png')" :dark="require('./darkmode_dark.png')"></q-image>
-                <div class="description">
-                    <q-title :level="3">暗夜模式</q-title>
-                    <q-footnote>对用户细致入微的关怀</q-footnote>
-                </div>
-                <div class="controller">
-                    <q-footnote>打开暗夜模式</q-footnote>
-                    <q-switch v-model="store.enableDarkMode"></q-switch>
-                </div>
-            </q-panel>
+            <q-title class="title" :level="2">{{ $t("features") }}</q-title>
 
-            <q-panel border class="features feature-color">
-                <div class="description">
-                    <q-title :level="3">多彩主题</q-title>
-                    <q-footnote>不只是黑与白</q-footnote>
+            <div class="feature-block darkmode" @click="toggleDarkMode">
+                <q-image src="./features_darkmode_disable.png" dark="./features_darkmode_enable.png" height="280px"></q-image>
+                <div class="content">
+                    <q-title class="feature-title" v-html="$t('features-darkmode')"></q-title>
+                    <div class="darkmode-switch">
+                        <q-switch size="large" :value="store.enableDarkMode"></q-switch>
+                        <q-footnote>{{ $t("features-enable") }}</q-footnote>
+                    </div>
                 </div>
-                <div class="controller">
-                    <color-selector colorname="poe" :activedname="currentColor" @change="handleColorChange"></color-selector>
-                    <color-selector colorname="starrynight" :activedname="currentColor" @change="handleColorChange"></color-selector>
-                    <color-selector colorname="sunflower" :activedname="currentColor" @change="handleColorChange"></color-selector>
-                    <color-selector colorname="enjolras" :activedname="currentColor" @change="handleColorChange"></color-selector>
-                    <color-selector colorname="spring" :activedname="currentColor" @change="handleColorChange"></color-selector>
-                </div>
-            </q-panel>
+            </div>
 
-        </q-panel>
+            
+            <div class="feature-block colors" :style="currentColorsBackgroundStyle">
+                <q-color-block class="mask"></q-color-block>
+                <div class="content">
+                    <q-theme class="theme-detector">
+                        <q-title class="feature-title" v-html="$t('features-colors')"></q-title>
+
+                        <div class="colors-info">
+                            <q-title :level="2">{{ $t(`features-colors-${currentColor}-name`) }}</q-title>
+                            <q-footnote>{{ $t(`features-colors-inspired`) }}</q-footnote>
+                            <q-title :level="3">{{ $t(`features-colors-${currentColor}-description`) }}</q-title>
+                        </div>
+
+                        <div class="colors-switch">
+                            <q-color-block @click.native="handleColorChange('poe')" color="poe" :size="24" round><q-icon name="correct" v-show="currentColor==='poe'"></q-icon></q-color-block>
+                            <q-color-block @click.native="handleColorChange('starrynight')" color="starrynight" :size="24" round><q-icon name="correct" v-show="currentColor==='starrynight'"></q-icon></q-color-block>
+                            <q-color-block @click.native="handleColorChange('sunflower')" color="sunflower" :size="24" round><q-icon name="correct" v-show="currentColor==='sunflower'"></q-icon></q-color-block>
+                            <q-color-block @click.native="handleColorChange('enjolras')" color="enjolras" :size="24" round><q-icon name="correct" v-show="currentColor==='enjolras'"></q-icon></q-color-block>
+                            <q-color-block @click.native="handleColorChange('spring')" color="spring" :size="24" round><q-icon name="correct" v-show="currentColor==='spring'"></q-icon></q-color-block>
+                        </div>
+                    </q-theme>
+                </div>
+            </div>
+
+        </div>
     </page>
 </template>
 
 <style lang="less" scoped>
 @import "~@/core/standard.less";
 
-.container {
-    padding-top: 5*@grid;
+.stage {
     width: 61.8%;
-    min-width: 480px;
     margin: 0px auto;
+}
 
-    .title {
-        text-align: center;
+.title {
+    margin-top: 8*@grid;
+    margin-bottom: 4*@grid;
+}
+
+.feature-block {
+    position: relative;
+
+    .feature-title {
+        letter-spacing: @grid;
+        margin: 4*@grid;
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: bolder;
+    }
+
+    .content {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
 }
 
-.header {
-    padding-top: 96px;
-    padding-bottom: 96px;
-    width: 100%;
-    text-align: center;
-
-    .q-color-block {
-        margin-left: @grid;
-        display: inline-block;
-        vertical-align: baseline;
-    }
-}
-
-.features {
-    box-sizing: border-box;
-    padding: 16px;
-    width: 100%;
-    max-width: 640px;
-    margin: 0px auto;
-    margin-bottom: 2*@grid;
-
-    .q-image {
-        height: 64px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .description {
-        margin-left: 16px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-}
-
-.feature-darkmode {
-    margin-top: 6*@grid;
+.darkmode {
+    float: left;
+    border: 1px solid @color-light-secondary-background;
     cursor: pointer;
 
-    .controller {
-        margin-right: @grid;
-        float: right;
-        margin-top: 19px;
-        pointer-events: none;
-        
+    .darkmode-switch {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        margin: 4*@grid;
+
         * {
-            margin-left: @grid;
             display: inline-block;
             vertical-align: middle;
+            margin-right: 2*@grid;
         }
     }
 }
 
-.feature-color {
-    .controller {
-        text-align: center;
-        margin: 2*@grid 0px;
+.colors {
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .transition();
+
+    .mask {
+        width: 420px;
+        height: 280px;
+        opacity: 0.5;
+    }
+
+    .theme-detector[class*="theme-light"] {
+        /deep/ * {
+            color: @color-light-background;
+        }
+    }
+
+    .theme-detector[class*="theme-dark"] {
+        /deep/ * {
+            color: @color-dark-background;
+        }
+    }
+
+    .theme-detector:not([class*="color-poe"]) {
+        /deep/ * {
+            color: @color-light-background;
+        }
+    }
+
+    .colors-info {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        margin: 4*@grid;
+    }
+
+    .colors-switch {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        margin-right: 4*@grid;
+        height: 100%;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
 
-        * {
-            margin: 0px 2*@grid;
-            margin-top: 7px;
+        .q-color-block {
+            cursor: pointer;
+            text-align: center;
+            line-height: 22px;
+            font-weight: bolder;
+            border: 2px solid @color-white;
+            margin-bottom: 2*@grid;
+        }
+
+        .q-color-block:last-of-type {
+            margin-bottom: 0px;
         }
     }
-
-    .q-select {
-        width: 126px;
-    }
-
-    .description {
-        margin: 0px;
-        margin-top: 4px;
-    }
-
-    .q-color-block {
-        margin-right: @grid;
-        float: left;
-    }
 }
+
 </style>
 
 <script>
 import store from "document/store.js";
+import colors_poe from "./features_colors_poe.png";
+import colors_starrynight from "./features_colors_starrynight.png";
+import colors_sunflower from "./features_colors_sunflower.png";
+import colors_enjolras from "./features_colors_enjolras.png";
+import colors_spring from "./features_colors_spring.png";
 
-import ColorSelector from "./color-selector.vue";
+const colorsBackgroundMap = {
+    colors_poe,
+    colors_starrynight,
+    colors_sunflower,
+    colors_enjolras,
+    colors_spring
+}
 
 export default {
-    components: {
-        ColorSelector
-    },
     data(){
         return {
             store
@@ -145,6 +187,11 @@ export default {
     computed: {
         currentColor(){
             return this.store.color;
+        },
+        currentColorsBackgroundStyle(){
+            return {
+                backgroundImage: `url(${colorsBackgroundMap["colors_"+this.currentColor]})`
+            }
         }
     },
     methods: {

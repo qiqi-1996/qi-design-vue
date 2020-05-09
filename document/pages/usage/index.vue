@@ -1,4 +1,4 @@
-<i18n src="./i18n.json"></i18n>
+<i18n src="./usage.i18n.json"></i18n>
 <template>
     <side-router :data="data" :i18n="$t.bind(this)"></side-router>
 </template>

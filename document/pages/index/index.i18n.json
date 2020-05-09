@@ -1,0 +1,40 @@
+{
+    "en": {
+        "features": "Features",
+
+        "features-darkmode": "DARK<br>MODE",
+        "features-enable": "CLICK TO ENABLE",
+
+        "features-colors": "COLORS",
+        "features-colors-inspired": "INSPIRED BY",
+        "features-colors-poe-name": "POE",
+        "features-colors-poe-description": "The Raven",
+        "features-colors-starrynight-name": "STARRY NIGHT",
+        "features-colors-starrynight-description": "Vincent Willem van Gogh",
+        "features-colors-sunflower-name": "SUNFLOWER",
+        "features-colors-sunflower-description": "Vincent Willem van Gogh",
+        "features-colors-enjolras-name": "ENJOLRAS",
+        "features-colors-enjolras-description": "Les Misérables",
+        "features-colors-spring-name": "SPRING",
+        "features-colors-spring-description": "Claude Monet"
+    },
+    "zh-CN": {
+        "features": "功能特性",
+
+        "features-darkmode": "暗黑模式",
+        "features-enable": "点击以启用",
+
+        "features-colors": "色彩",
+        "features-colors-inspired": "INSPIRED BY",
+        "features-colors-poe-name": "爱伦坡",
+        "features-colors-poe-description": "《乌鸦》",
+        "features-colors-starrynight-name": "星月夜",
+        "features-colors-starrynight-description": "文森特·梵高",
+        "features-colors-sunflower-name": "向日葵",
+        "features-colors-sunflower-description": "文森特·梵高",
+        "features-colors-enjolras-name": "安灼拉",
+        "features-colors-enjolras-description": "《悲惨世界》",
+        "features-colors-spring-name": "春天",
+        "features-colors-spring-description": "克劳德·莫奈"
+    }
+}

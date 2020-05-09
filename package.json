@@ -1,6 +1,6 @@
 {
   "name": "qi-design-vue",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Qi Design Standard | An implement for Web UI components based on Vue.",
   "scripts": {
     "start": "cross-env NODE_ENV=development node -r esm bootstrap.js development",
