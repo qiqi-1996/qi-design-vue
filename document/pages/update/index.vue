@@ -8,6 +8,20 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.4.0</q-title>
+            <q-footnote>2020-05-10</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 Image 组件</li>
+                <li>新增 Icons</li>
+                <li>新增 开发者文档页的文档编写规范（部分）</li>
+                <q-title :level="3">修复</q-title>
+                <li>修复文档属性呈现组件的 i18n 问题</li>
+                <li>修复 Icon 文档的呈现问题</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.3.1</q-title>
             <q-footnote>2020-05-09</q-footnote>
             <ul>

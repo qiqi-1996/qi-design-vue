@@ -1,7 +1,9 @@
 <template>
     <q-panel class="icon-item" border>
-        <q-icon :name="name"></q-icon>
-        <q-footnote class="name">{{name}}</q-footnote>
+        <div class="center">
+            <q-icon :name="name"></q-icon>
+            <q-footnote class="name" mode="compact">{{name}}</q-footnote>
+        </div>
     </q-panel>
 </template>
 
@@ -10,6 +12,7 @@
 
 .icon-item {
     display: inline-block;
+    vertical-align: middle;
     width: 80px;
     height: 80px;
     text-align: center;
@@ -17,15 +20,21 @@
     cursor: pointer;
     .transition();
 
+    .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .q-icon {
-        line-height: 64px;
         font-size: 32px;
     }
 
     .q-footnote {
         text-align: center;
-        line-height: 0px;
-        margin: 0px;
+        margin: 4px;
     }
 }
 

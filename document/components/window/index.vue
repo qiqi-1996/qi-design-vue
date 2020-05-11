@@ -1,7 +1,7 @@
 <i18n src="./i18n.json"></i18n>
 
 <template>
-    <q-panel class="window" border>
+    <q-panel :class="className" border>
         <div class="title-bar">
             <div class="controller">
                 <q-color-block :size="12" round color="enjolras" class="item"></q-color-block>
@@ -74,10 +74,20 @@
         }
     }
 }
+
+.window {
+    /deep/ img {
+        max-width: initial;
+        max-height: initial;
+    }
+}
 </style>
 
 <script>
+import mixins from "@/core/mixins.js";
+
 export default {
+    mixins: [mixins],
     props: {
         title: String,
         source: String,
@@ -110,6 +120,13 @@ export default {
                     }
                 }
             }
+        }
+    },
+    computed: {
+        className(){
+            return this.computeClass({
+                "window": true
+            })
         }
     },
     methods: {

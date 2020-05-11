@@ -13,6 +13,8 @@ import messages from "./i18n";
 import store from "./store";
 
 settings.defaults.typography_mode = "normal";
+settings.defaults.image_lazy = true;
+settings.defaults.image_loading = true;
 
 Vue.use(QiDesignVue);
 Vue.use(VueRouter);

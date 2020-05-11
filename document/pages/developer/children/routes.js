@@ -10,6 +10,11 @@ export default [
         component: ()=>import("./construction/index.vue"),
     },
     {
+        name: "document-standard",
+        path: "document-standard",
+        component: ()=>import("./document-standard/index.vue"),
+    },
+    {
         name: "summary",
         path: "summary",
         component: ()=>import("./summary/index.vue"),

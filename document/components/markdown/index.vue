@@ -35,7 +35,8 @@ const MarkdownRenderer = {
 
 export default {
     props: {
-        i18n: Object
+        i18n: Object,
+        components: Object
     },
     data() {
         return {
@@ -67,6 +68,7 @@ export default {
             this.contentComponent = Vue.compile(
                 "<div>" + marked(content) + "</div>"
             );
+            this.contentComponent.components = this.components;
             this.$nextTick(() => {
                 this.rendered = true;
             });

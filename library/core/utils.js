@@ -1,4 +1,5 @@
 import shortid from "shortid";
+import dom from "./dom.js";
 import { EventEmitter } from "events";
 
 var event = new EventEmitter();
@@ -24,6 +25,7 @@ function id() {
 }
 
 export default {
+    dom,
     validator,
     event,
     id,

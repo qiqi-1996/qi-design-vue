@@ -192,7 +192,7 @@ export default {
                     <span class="title">{this.$slots.default}</span>
                 </button>
             )
-            return createElement("button", { "class": this.className }, this.$slots.default);
+            // return createElement("button", { "class": this.className }, this.$slots.default);
         }
     },
     mixins: [mixins],

@@ -58,22 +58,26 @@
 
     // Templates
 
-    "Document Template": {
+    "Document Template Vue": {
         "scope": "vue",
-        "prefix": ["document-template", "dt"],
+        "prefix": ["document-template-vue", "dtv"],
         "body": [
             "<template>",
-            "\t<document>",
-            "\t\t<q-title :level=\"1\" colorful>${1:组件名称} <strong>${2:组件标识}</strong></q-title>",
-            "",
-            "\t\t<q-title :level=\"2\">预览</q-title>",
-            "",
-            "\t\t<window>",
-            "\t\t    $3",
-            "\t\t</window>",
-            "",
-            "\t</document>",
+            "\t<markdown :i18n=\"i18n\"></markdown>",
             "</template>",
+            "",
+            "<script>",
+            "export default {",
+            "\tdata(){",
+            "\t\treturn {",
+            "\t\t\ti18n: {",
+            "\t\t\t\t\"en\": ()=>import(\"./${1:name}.en.md\"),",
+            "\t\t\t\t\"zh-CN\": ()=>import(\"./${1:name}.zh-CN.md\"),",
+            "\t\t\t}",
+            "\t\t}",
+            "\t}",
+            "}",
+            "</script>"
         ]
     },
     "i18n": {

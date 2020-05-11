@@ -2,6 +2,7 @@
     "en": {
         "usage": {
             "usage": "Usage",
+            "usage-tips": "Please click \"View Source\" in the preview window above",
             "preview": "Preview",
             "property": "Property",
             "events": "Events"
@@ -10,6 +11,7 @@
     "zh-CN": {
         "usage": {
             "usage": "使用方法",
+            "usage-tips": "请点击上方预览窗口中的“查看源码”",
             "preview": "预览",
             "property": "属性",
             "events": "事件"

@@ -134,6 +134,12 @@ export default {
                     imageDark: require("./icons/panel_dark.png"),
                 },
                 {
+                    to: "/usage/image",
+                    title: "image",
+                    imageLight: require("./icons/image_light.png"),
+                    imageDark: require("./icons/image_dark.png"),
+                },
+                {
                     to: "/usage/typography",
                     title: "typography",
                     imageLight: require("./icons/typography_light.png"),

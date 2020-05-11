@@ -134,6 +134,13 @@ const surface = [
     "copy",
     "paste",
 
+    // 软件元素
+    "warning",
+    "warning-circle",
+    "question-circle",
+    "info-circle",
+    "error-circle",
+
     // 杂项
     "earth",
     "shirt",

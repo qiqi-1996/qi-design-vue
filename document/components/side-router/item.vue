@@ -1,6 +1,6 @@
 <template>
     <q-hover :active="active" :config="config">
-        <q-image :theme="imageTheme" :src="imageLight" :dark="imageDark" width="auto" height="32px"></q-image>
+        <q-image :theme="imageTheme" :src="imageLight" :src-dark="imageDark" width="auto" height="32px"></q-image>
         <span class="title"><slot></slot></span>
     </q-hover>
 </template>

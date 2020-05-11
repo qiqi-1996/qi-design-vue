@@ -7,7 +7,7 @@
             <q-title class="title" :level="2">{{ $t("features") }}</q-title>
 
             <div class="feature-block darkmode" @click="toggleDarkMode">
-                <q-image src="./features_darkmode_disable.png" dark="./features_darkmode_enable.png" height="280px"></q-image>
+                <q-image src="./features_darkmode_disable.png" src-dark="./features_darkmode_enable.png" :lazy="false" height="280px"></q-image>
                 <div class="content">
                     <q-title class="feature-title" v-html="$t('features-darkmode')"></q-title>
                     <div class="darkmode-switch">
@@ -82,6 +82,7 @@
     float: left;
     border: 1px solid @color-light-secondary-background;
     cursor: pointer;
+    .transition();
 
     .darkmode-switch {
         position: absolute;
@@ -158,6 +159,10 @@
             margin-bottom: 0px;
         }
     }
+}
+
+.darkmode:hover, .colors:hover {
+    transform: scale(1.05);
 }
 
 </style>

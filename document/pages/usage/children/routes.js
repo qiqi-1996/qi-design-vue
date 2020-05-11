@@ -40,6 +40,11 @@ export default [
         component: ()=>import("./icon/index.vue"),
     },
     {
+        name: "image",
+        path: "image",
+        component: ()=>import("./image/index.vue"),
+    },
+    {
         name: "input",
         path: "input",
         component: ()=>import("./input/index.vue"),
