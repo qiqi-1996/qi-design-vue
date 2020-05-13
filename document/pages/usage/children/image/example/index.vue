@@ -1,4 +1,4 @@
-<i18n src="./i18n.json"></i18n>
+<i18n src="./example.image.i18n.json"></i18n>
 
 <template>
     <window class="window" source="image">

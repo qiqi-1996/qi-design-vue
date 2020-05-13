@@ -3,11 +3,11 @@
     <q-panel>
         <table class="property-block-container">
             <tr>
-                <th style="width: 80px;"><q-title mode="single" :level="4" colorful>{{ $t("property") }}</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>{{ $t("definition") }}</q-title></th>
+                <th style="min-width: 100px;"><q-title mode="single" :level="4" colorful>{{ $t("property") }}</q-title></th>
+                <th style="min-width: 150px;"><q-title mode="single" :level="4" colorful>{{ $t("definition") }}</q-title></th>
                 <th><q-title mode="single" :level="4" colorful>{{ $t("defaults") }}</q-title></th>
                 <th><q-title mode="single" :level="4" colorful>{{ $t("type") }}</q-title></th>
-                <th><q-title mode="single" :level="4" colorful>{{ $t("example") }}</q-title></th>
+                <th style="min-width: 150px;"><q-title mode="single" :level="4" colorful>{{ $t("example") }}</q-title></th>
             </tr>
             <slot></slot>
             <tr v-if="general" class="general" @click="toggleGeneral">

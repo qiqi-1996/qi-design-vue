@@ -8,7 +8,7 @@
                 <br>
                 <q-text :level="3" colorful class="edition"><strong>VUE EDITION</strong></q-text>
             </div>
-            <q-menu class="language" @select="handleLanguageSelect" :data="LanguageList" :open="LanguageOpen" size="small" full>
+            <q-menu class="language" @select="handleLanguageSelect" :data="LanguageList" v-model="LanguageOpen" size="small" full>
                 <q-button icon="earth" size="small" @click="toggleLanguageMenu">Language</q-button>
             </q-menu>
             <q-footnote class="tips" v-show="$i18n.locale!='zh-CN'">Current language is not fully translated.</q-footnote>

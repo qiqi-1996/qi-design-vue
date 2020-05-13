@@ -1,0 +1,16 @@
+{
+    "en": {
+        "container": "Click Me",
+        "title": "Popover Title",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "confirm": "Confirm",
+        "cancel": "Cancel"
+    },
+    "zh-CN": {
+        "container": "点击此处",
+        "title": "弹出框标题",
+        "content": "我家门口有两棵树，一颗是枣树，另一颗还是枣树。——鲁迅",
+        "confirm": "确定",
+        "cancel": "取消"
+    }
+}

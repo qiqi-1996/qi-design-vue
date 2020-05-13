@@ -135,7 +135,7 @@ export default {
                     const Loading = this.loading;
                     return (<Loading />);
                 } else {
-                    return <span></span>;
+                    return <img class={this.className}></img>;
                 }
             } else if(this.imageState === "error"){
                 if (this.error === true) {
@@ -144,7 +144,7 @@ export default {
                     const Error = this.error;
                     return (<Error />);
                 } else {
-                    return <span></span>;
+                    return <img class={this.className}></img>;
                 }
             } else {
                 return <img class={this.className} src={this.imageSrc}></img>;
@@ -167,7 +167,7 @@ export default {
                                 const Loading = this.loading;
                                 return (<Loading />);
                             } else {
-                                return <span></span>;
+                                return <img></img>;
                             }
                         } else if(this.imageState === "error"){
                             if (this.error === true) {
@@ -176,7 +176,7 @@ export default {
                                 const Error = this.error;
                                 return (<Error />);
                             } else {
-                                return <span></span>;
+                                return <img></img>;
                             }
                         } else {
                             return (

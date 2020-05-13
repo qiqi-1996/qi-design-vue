@@ -65,6 +65,11 @@ export default [
         component: ()=>import("./panel/index.vue"),
     },
     {
+        name: "popover",
+        path: "popover",
+        component: ()=>import("./popover/index.vue"),
+    },
+    {
         name: "progress",
         path: "progress",
         component: ()=>import("./progress/index.vue"),

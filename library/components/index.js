@@ -13,6 +13,7 @@ import QImage from "./image/index.vue";
 import QInput from "./input/index.vue";
 import QMenu from "./menu/index.vue";
 import QPanel from "./panel/index.vue";
+import QPopover from "./popover/index.vue";
 import QProgress from "./progress/index.vue";
 import QQuote from "./quote/index.vue";
 import QRadio from "./radio/index.vue";
@@ -43,6 +44,7 @@ export default {
     QInput,
     QMenu,
     QPanel,
+    QPopover,
     QProgress,
     QQuote,
     QRadio,

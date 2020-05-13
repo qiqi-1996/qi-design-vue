@@ -8,6 +8,19 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.5.0</q-title>
+            <q-footnote>2020-05-13</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 Popover 组件</li>
+                <q-title :level="3">修复</q-title>
+                <li>修复文档语言选择框 BUG </li>
+                <q-title :level="3">变更</q-title>
+                <li>文档首页增加响应式，优化颜色切换的交互方式</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.4.0</q-title>
             <q-footnote>2020-05-10</q-footnote>
             <ul>

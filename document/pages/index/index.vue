@@ -7,7 +7,7 @@
             <q-title class="title" :level="2">{{ $t("features") }}</q-title>
 
             <div class="feature-block darkmode" @click="toggleDarkMode">
-                <q-image src="./features_darkmode_disable.png" src-dark="./features_darkmode_enable.png" :lazy="false" height="280px"></q-image>
+                <q-image src="./features_darkmode_disable.png" mode="cover" src-dark="./features_darkmode_enable.png" :lazy="false"></q-image>
                 <div class="content">
                     <q-title class="feature-title" v-html="$t('features-darkmode')"></q-title>
                     <div class="darkmode-switch">
@@ -18,7 +18,7 @@
             </div>
 
             
-            <div class="feature-block colors" :style="currentColorsBackgroundStyle">
+            <div class="feature-block colors" :style="currentColorsBackgroundStyle" @click="nextColor">
                 <q-color-block class="mask"></q-color-block>
                 <div class="content">
                     <q-theme class="theme-detector">
@@ -31,11 +31,7 @@
                         </div>
 
                         <div class="colors-switch">
-                            <q-color-block @click.native="handleColorChange('poe')" color="poe" :size="24" round><q-icon name="correct" v-show="currentColor==='poe'"></q-icon></q-color-block>
-                            <q-color-block @click.native="handleColorChange('starrynight')" color="starrynight" :size="24" round><q-icon name="correct" v-show="currentColor==='starrynight'"></q-icon></q-color-block>
-                            <q-color-block @click.native="handleColorChange('sunflower')" color="sunflower" :size="24" round><q-icon name="correct" v-show="currentColor==='sunflower'"></q-icon></q-color-block>
-                            <q-color-block @click.native="handleColorChange('enjolras')" color="enjolras" :size="24" round><q-icon name="correct" v-show="currentColor==='enjolras'"></q-icon></q-color-block>
-                            <q-color-block @click.native="handleColorChange('spring')" color="spring" :size="24" round><q-icon name="correct" v-show="currentColor==='spring'"></q-icon></q-color-block>
+                            <q-color-block v-for="(color,index) in colorList" :key="index" @click.native.stop="doColorChange(color)" :color="color" :size="24" round><q-icon name="correct" v-show="currentColor===color"></q-icon></q-color-block>
                         </div>
                     </q-theme>
                 </div>
@@ -59,7 +55,10 @@
 }
 
 .feature-block {
+    .noselect();
     position: relative;
+    width: calc(~"50% - 16px");
+    height: 280px;
 
     .feature-title {
         letter-spacing: @grid;
@@ -84,6 +83,11 @@
     cursor: pointer;
     .transition();
 
+    .q-image {
+        width: 100%;
+        height: 100%;
+    }
+
     .darkmode-switch {
         position: absolute;
         left: 0px;
@@ -103,10 +107,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
     .transition();
 
     .mask {
-        width: 420px;
+        width: 100%;
         height: 280px;
         opacity: 0.5;
     }
@@ -162,9 +167,12 @@
 }
 
 .darkmode:hover, .colors:hover {
+    z-index: 1;
     transform: scale(1.05);
 }
 
+@import "./responsive.screen.less";
+@import "./responsive.mobile.less";
 </style>
 
 <script>
@@ -186,7 +194,14 @@ const colorsBackgroundMap = {
 export default {
     data(){
         return {
-            store
+            store,
+            colorList: [
+                "poe",
+                "starrynight",
+                "sunflower",
+                "enjolras",
+                "spring"
+            ]
         }
     },
     computed: {
@@ -203,8 +218,16 @@ export default {
         toggleDarkMode(){
             this.store.enableDarkMode = !this.store.enableDarkMode;
         },
-        handleColorChange(value){
+        doColorChange(value){
             this.store.color = value;
+        },
+        nextColor(){
+            let index = this.colorList.indexOf(this.store.color) + 1;
+            console.log(index);
+            if(index>this.colorList.length-1){
+                index = 0;
+            }
+            this.store.color = this.colorList[index];
         }
     }
 }

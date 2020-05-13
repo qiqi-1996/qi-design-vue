@@ -24,7 +24,7 @@
     padding: 16px;
     padding-top: 32px;
     position: relative;
-    box-shadow: rgba(33, 33, 33, 0.05) 0px 5px 0px 0px;
+    box-shadow: rgba(33, 33, 33, 0.05) 0px 6px 0px -2px;
 }
 
 .title-bar {
@@ -80,6 +80,8 @@
         max-width: initial;
         max-height: initial;
     }
+
+    /deep/ * { margin: 0px }
 }
 </style>
 

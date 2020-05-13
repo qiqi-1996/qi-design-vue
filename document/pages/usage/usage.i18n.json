@@ -14,7 +14,8 @@
         "button": "Button",
         "tab": "Tab",
         "menu": "Menu",
-        "collapse": "collapse",
+        "collapse": "Collapse",
+        "popover": "Popover",
 
         "type-of-display": "Display",
         "theme": "Theme",
@@ -42,6 +43,7 @@
         "tab": "选项卡",
         "menu": "菜单",
         "collapse": "收缩面板",
+        "popover": "弹出框",
 
         "type-of-display": "呈现类组件",
         "theme": "主题",

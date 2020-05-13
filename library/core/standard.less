@@ -100,6 +100,12 @@ Qi Design Standard
 @ease-strong: cubic-bezier(0.3, 1, 0, 1);
 @ease-weak: cubic-bezier(0.5, 0, 0.5, 1);
 
+/******* Responsive *******/
+
+@responsive-mobile: 768px;
+@responsive-tablet: 992px;
+@responsive-screen: 1200px;
+
 /******* Functions *******/
 
 .noselect(){
@@ -133,12 +139,6 @@ Qi Design Standard
     -ms-transition: @props @time @ease;
     -o-transition: @props @time @ease;
     transition: @props @time @ease;
-}
-
-.clearfloat::after{
-    content: '';
-    display: block;
-    clear: both;
 }
 
 .reset(){

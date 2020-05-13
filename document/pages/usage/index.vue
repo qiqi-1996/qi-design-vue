@@ -105,6 +105,12 @@ export default {
                     imageLight: require("./icons/collapse_light.png"),
                     imageDark: require("./icons/collapse_dark.png"),
                 },
+                {
+                    to: "/usage/popover",
+                    title: "popover",
+                    imageLight: require("./icons/popover_light.png"),
+                    imageDark: require("./icons/popover_dark.png"),
+                },
                 // {
                 //     to: "/usage/tree",
                 //     title: "树形控件",
