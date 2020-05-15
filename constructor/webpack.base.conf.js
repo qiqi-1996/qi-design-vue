@@ -48,7 +48,7 @@ export default {
     },
     resolve: {
         alias: {
-            "@": env.PATH_LIBRARY,
+            "@qiqi1996/qi-design-vue": env.PATH_LIBRARY,
             "document": env.PATH_DOCUMENT,
             "vue": "vue/dist/vue"
         }

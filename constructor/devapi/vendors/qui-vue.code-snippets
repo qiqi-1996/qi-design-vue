@@ -14,7 +14,7 @@
         "scope": "css,less",
         "prefix": ["import-standard", "is"],
         "body": [
-            "@import \"~@/core/standard.less\";"
+            "@import \"~@qiqi1996/qi-design-vue/core/standard.less\";"
         ]
     },
     "CSS Selector For Judgment": {
@@ -45,14 +45,14 @@
         "scope": "javascript",
         "prefix": ["import-mixins", "im"],
         "body": [
-            "import mixins from \"@/core/mixins.js\";"
+            "import mixins from \"@qiqi1996/qi-design-vue/core/mixins.js\";"
         ]
     },
     "Import Utils": {
         "scope": "javascript",
         "prefix": ["import-utils", "iu"],
         "body": [
-            "import utils from \"@/core/utils.js\";"
+            "import utils from \"@qiqi1996/qi-design-vue/core/utils.js\";"
         ]
     },
 

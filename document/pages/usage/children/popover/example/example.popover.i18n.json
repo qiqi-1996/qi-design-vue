@@ -1,15 +1,27 @@
 {
     "en": {
-        "container": "Click Me",
+        "click-me": "Click Me",
+        "hover-me": "Hover Me",
         "title": "Popover Title",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+
+        "built-in-style": "Popover provides title, content and operation button style by default",
+        "customize-content": "You can also customize the content, for example:",
+        "copyright": "Copyright 2020 &copy; SaekiRaku<br/>Share this picture based on the Creative Commons license: BY (Attribution)",
+
         "confirm": "Confirm",
         "cancel": "Cancel"
     },
     "zh-CN": {
-        "container": "点击此处",
+        "click-me": "点击此处",
+        "hover-me": "鼠标悬浮此处",
         "title": "弹出框标题",
-        "content": "我家门口有两棵树，一颗是枣树，另一颗还是枣树。——鲁迅",
+        "content": "我家的门前有两棵树，一棵是枣树，另一颗还是枣树。——鲁迅",
+
+        "built-in-style": "Popover 组件默认提供了标题、内容和操作按钮的样式",
+        "customize-content": "您也可以自定义其中的内容，例如：",
+        "copyright": "Copyright 2020 &copy; 佐伯楽<br/>基于 CC 协议共享此图片：BY（署名）",
+
         "confirm": "确定",
         "cancel": "取消"
     }

@@ -2,6 +2,6 @@ export default [
     {
         name: "icons",
         path: "icons",
-        component: ()=>import("./icons/index.vue"),
+        component: ()=>import(/* webpackChunkName: "icons" */"./icons/index.vue"),
     },
 ]

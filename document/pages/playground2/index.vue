@@ -29,7 +29,7 @@
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .page {
     width: 100%;

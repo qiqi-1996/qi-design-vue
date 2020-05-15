@@ -7,7 +7,7 @@
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .q-select-item {
     padding: 2*@grid;
@@ -61,7 +61,7 @@
 </style>
 
 <script>
-import mixins from "@/core/mixins.js";
+import mixins from "@qiqi1996/qi-design-vue/core/mixins.js";
 
 export default {
     mixins: [mixins],

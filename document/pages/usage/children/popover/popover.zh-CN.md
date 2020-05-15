@@ -8,6 +8,28 @@
 
 {{ $t("common.usage.usage-tips") }}
 
+```
+&lt;!-- 默认样式 --&gt;
+
+&lt;q-popover
+    title=&quot;...&quot;
+    text=&quot;...&quot;
+    confirmText=&quot;确认&quot;
+    cancelText=&quot;取消&quot;
+&gt;
+    &lt;q-button&gt;...&lt;/q-button&gt;
+&lt;/q-popover&gt;
+
+&lt;!-- 自定义弹出内容 --&gt;
+
+&lt;q-popover&gt;
+    &lt;q-button&gt;...&lt;/q-button&gt;
+    &lt;div slot=&quot;content&quot;&gt;
+        &lt;q-text&gt;...&lt;/q-text&gt;
+    &lt;/div&gt;
+&lt;/q-popover&gt;
+```
+
 ## {{ $t("common.usage.property") }}
 
 <property-block>

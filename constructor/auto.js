@@ -54,9 +54,9 @@ function runForPages(pagepath = env.PATH_DOCUMENT_PAGES) {
         } else {
             route += `        path: "${item}",\n`;
         }
-        route += `        component: ()=>import("./${item}/index.vue"),\n`;
+        route += `        component: ()=>import(/* webpackChunkName: "${item}" */"./${item}/index.vue"),\n`;
         if (fs.existsSync(path.resolve(pagepath, item, "children"))) {
-            route += `        children: require("./${item}/children/routes.js").default,\n`
+            route += `        children: require(/* webpackChunkName: "${item}" */"./${item}/children/routes.js").default,\n`
             runForPages(path.resolve(pagepath, item, "children"));
         }
         route += `    },`;
@@ -68,7 +68,7 @@ function runForPages(pagepath = env.PATH_DOCUMENT_PAGES) {
         route += `    {\n`
         route += `        name: "404",\n`;
         route += `        path: "*",\n`;
-        route += `        component: ()=>import("./404/index.vue"),\n`;
+        route += `        component: ()=>import(/* webpackChunkName: "404" */"./404/index.vue"),\n`;
         route += `    },`;
         routes.push(route);
     }

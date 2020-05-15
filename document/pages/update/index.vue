@@ -8,6 +8,19 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.5.1</q-title>
+            <q-footnote>2020-05-15</q-footnote>
+            <ul>
+                <q-title :level="3">变更</q-title>
+                <li>Popover 组件更正为行内块样式</li>
+                <li>Popover 组件增加弹出动效</li>
+                <li>优化&完善 Popover 组件的文档案例及代码</li>
+                <li>文档增加具名打包</li>
+                <li>优化编译策略，缩减输出体积</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.5.0</q-title>
             <q-footnote>2020-05-13</q-footnote>
             <ul>
@@ -172,7 +185,7 @@
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .description {
     padding: @grid;

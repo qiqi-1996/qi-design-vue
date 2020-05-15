@@ -7,7 +7,7 @@
 <style lang="less">
 // 此处不使用 scoped 以降低该组件下的 CSS 权重
 
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 /******* Base *******/
 

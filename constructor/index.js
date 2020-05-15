@@ -34,6 +34,10 @@ async function dev(userConfig) {
 
 async function build(userConfig, options) {
     process.env.NODE_ENV = "production";
+
+    auto.runForComponents();
+    auto.runForPages();
+
     const config = merge(config_base, config_prod, userConfig);
     const compiler = webpack(config);
 

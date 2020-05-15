@@ -8,6 +8,28 @@
 
 {{ $t("common.usage.usage-tips") }}
 
+```
+&lt;!-- Default Style --&gt;
+
+&lt;q-popover
+    title=&quot;...&quot;
+    text=&quot;...&quot;
+    confirmText=&quot;Confirm&quot;
+    cancelText=&quot;Cancel&quot;
+&gt;
+    &lt;q-button&gt;...&lt;/q-button&gt;
+&lt;/q-popover&gt;
+
+&lt;!-- Customize Content --&gt;
+
+&lt;q-popover&gt;
+    &lt;q-button&gt;...&lt;/q-button&gt;
+    &lt;div slot=&quot;content&quot;&gt;
+        &lt;q-text&gt;...&lt;/q-text&gt;
+    &lt;/div&gt;
+&lt;/q-popover&gt;
+```
+
 ## {{ $t("common.usage.property") }}
 
 <property-block>

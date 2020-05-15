@@ -63,7 +63,7 @@
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .header {
     padding-top: 8*@grid;

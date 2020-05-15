@@ -3,7 +3,7 @@ import "./index.less";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import VueI18N from "vue-i18n";
-import QiDesignVue, { settings } from "@/index.js";
+import QiDesignVue, { settings } from "@qiqi1996/qi-design-vue/index.js";
 
 import routes from "./pages/routes.js";
 

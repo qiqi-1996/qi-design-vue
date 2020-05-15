@@ -11,7 +11,7 @@
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 /******* Universal *******/
 
@@ -218,14 +218,14 @@
 // .disable[class*="theme-light"] {
 //     opacity: 0.5;
 //     pointer-events: none;
-//     background-image: url("~@/assets/disable-light.png");
+//     background-image: url("~@qiqi1996/qi-design-vue/assets/disable-light.png");
 //     background-size: 20%;
 // }
 
 // .disable[class*="theme-dark"] {
 //     opacity: 0.8;
 //     pointer-events: none;
-//     background-image: url("~@/assets/disable-dark.png");
+//     background-image: url("~@qiqi1996/qi-design-vue/assets/disable-dark.png");
 //     background-size: 20%;
 // }
 
@@ -241,8 +241,8 @@
 </style>
 
 <script>
-import mixins from "@/core/mixins.js";
-import utils from "@/core/utils.js";
+import mixins from "@qiqi1996/qi-design-vue/core/mixins.js";
+import utils from "@qiqi1996/qi-design-vue/core/utils.js";
 
 export default {
     mixins: [mixins],

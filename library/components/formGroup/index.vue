@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import mixins from "@/core/mixins.js";
+import mixins from "@qiqi1996/qi-design-vue/core/mixins.js";
 
 export default {
     mixins: [mixins],

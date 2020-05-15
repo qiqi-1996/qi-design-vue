@@ -3,35 +3,44 @@
         <slot></slot>
 
         <div :class="contentClassName" @click.stop>
-            <q-panel class="content-panel customize-content" border v-if="$slots.content && vvalue">
-                <div class="indicator"></div>
-                <slot name="content"></slot>
-            </q-panel>
-            <q-panel class="content-panel template-content" border v-else-if="vvalue" :style="{ width }">
-                <div class="indicator"></div>
-                <q-title class="title" :level="6" v-if="title">{{title}}</q-title>
-                <q-text class="text" v-if="text">{{text}}</q-text>
-                <div class="controller" v-if="confirmText || cancelText">
-                    <q-button size="small" v-if="cancelText" @click.stop="doEmitClickEvent('cancel')">{{cancelText}}</q-button>
-                    <q-button size="small" type="primary" v-if="confirmText" @click.stop="doEmitClickEvent('confirm')">{{confirmText}}</q-button>
+            <transition mode="in-out">
+                <div v-if="vvalue">
+                    <q-panel class="content-panel customize-content" border v-if="$slots.content">
+                        <div class="indicator"></div>
+                        <slot name="content"></slot>
+                    </q-panel>
+                    <q-panel class="content-panel template-content" border v-else :style="{ width }">
+                        <div class="indicator"></div>
+                        <q-title class="title" :level="6" v-if="title">{{title}}</q-title>
+                        <q-text class="text" v-if="text">{{text}}</q-text>
+                        <div class="controller" v-if="confirmText || cancelText">
+                            <q-button size="small" v-if="cancelText" @click.stop="doEmitClickEvent('cancel')">{{cancelText}}</q-button>
+                            <q-button size="small" type="primary" v-if="confirmText" @click.stop="doEmitClickEvent('confirm')">{{confirmText}}</q-button>
+                        </div>
+                    </q-panel>
                 </div>
-            </q-panel>
+            </transition>
         </div>
     </div>
 </template>
 
 <style lang="less" scoped>
-@import "~@/core/standard.less";
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .q-popover {
+    display: inline-block;
     position: relative;
 
     .content {
-        padding: 2*@grid;
         position: absolute;
+        .transition();
         .content-panel {
             box-shadow: @color-light-secondary-background 0px 8px 0px -4px;
         }
+    }
+
+    .content[class*="actived"] {
+        padding: 2*@grid;
     }
 
     .template-content {
@@ -54,13 +63,12 @@
         }
     }
 
-
-
     .indicator {
         background: white;
         position: absolute;
         width: @grid;
         height: @grid;
+        // .transition();
     }
 
     /******* Top *******/
@@ -91,6 +99,7 @@
             left: 50%;
             transform: translate(-50%, 0) rotate(45deg);
         }
+
     }
 
     .content[class~="position-top-right"] {
@@ -238,6 +247,17 @@
             transform: rotate(45deg);
         }
     }
+
+    /******* Transition *******/
+
+    .v-enter-active, .v-leave-active {
+        .transition();
+    }
+
+    .v-enter, .v-leave-to {
+        opacity: 0;
+    }
+    
 }
 
 .q-popover[class*="theme-dark"] {
@@ -253,8 +273,8 @@
 </style>
 
 <script>
-import mixins from "@/core/mixins.js";
-import utils from "@/core/utils.js";
+import mixins from "@qiqi1996/qi-design-vue/core/mixins.js";
+import utils from "@qiqi1996/qi-design-vue/core/utils.js";
 
 export default {
     mixins: [mixins],
@@ -306,13 +326,15 @@ export default {
     computed: {
         className(){
             return this.computeClass({
-                position: this.position
+                position: this.position,
+                actived: this.vvalue
             });
         },
         contentClassName(){
             return this.computeClass({
                 "content": true,
-                position: this.position
+                position: this.position,
+                actived: this.vvalue
             }, false);
         }
     },

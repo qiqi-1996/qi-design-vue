@@ -21,4 +21,8 @@ export default function (Vue) {
     Vue.component("property-item", propertyitem);
     Vue.component("event-block", eventblock);
     Vue.component("event-item", eventitem);
+
+    Vue.component("v-hidden", {
+        template: "<span></span>"
+    })
 }
