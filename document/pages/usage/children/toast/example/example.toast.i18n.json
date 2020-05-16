@@ -1,0 +1,24 @@
+{
+    "en": {
+        "dog": "Do you like dog?",
+        "cat": "Do you like cat?",
+        "tips": "You can try to click the buttons below continuously <br> When multiple messages appear at the same time, the layout will be arranged automatically.",
+
+        "yes": "Yes",
+        "no": "No",
+
+        "me-too": "ME TOO!!!!",
+        "me-neither": "I dont like it either."
+    },
+    "zh-CN": {
+        "dog": "您喜欢狗吗？",
+        "cat": "您喜欢猫吗？",
+        "tips": "您可以尝试连续点击下方按钮<br>同时出现多条消息会自动排列布局。",
+
+        "yes": "是",
+        "no": "否",
+
+        "me-too": "我也是！！！！",
+        "me-neither": "我也不喜欢"
+    }
+}

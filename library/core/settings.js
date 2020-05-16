@@ -3,6 +3,7 @@ export default {
     // color: "poe",
 
     defaults: {
+        toast_duration: 3000,
 
         typography_mode: "single",
         title_mode: "",

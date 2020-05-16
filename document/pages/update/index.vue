@@ -8,6 +8,15 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.6.0</q-title>
+            <q-footnote>2020-05-16</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 Toast 消息</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.5.1</q-title>
             <q-footnote>2020-05-15</q-footnote>
             <ul>

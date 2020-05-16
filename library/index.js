@@ -1,19 +1,26 @@
 import "./core/common.less";
+
 import components from "./components";
 import settings from "./core/settings.js";
+import api from "./core/api.js";
+
+import QGlobal from "./global.vue";
 
 var vm;
 
 function install(Vue) {
-    // let container = document.createElement("div");
-    // document.body.appendChild(container);
-    // vm = new Vue({
-    //     el: container
-    // });
+    Vue.prototype.$qidesign = api;
 
     for (let key in components) {
         Vue.component(key, components[key]);
     };
+
+    let container = document.createElement("div");
+    document.body.appendChild(container);
+    vm = new Vue({
+        el: container,
+        render: h => h(QGlobal)
+    });
 }
 
 export default install;

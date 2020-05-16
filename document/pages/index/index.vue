@@ -223,7 +223,6 @@ export default {
         },
         nextColor(){
             let index = this.colorList.indexOf(this.store.color) + 1;
-            console.log(index);
             if(index>this.colorList.length-1){
                 index = 0;
             }

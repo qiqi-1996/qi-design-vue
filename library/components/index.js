@@ -25,6 +25,7 @@ import QTabItem from "./tabItem/index.vue";
 import QText from "./text/index.vue";
 import QTheme from "./theme/index.vue";
 import QTitle from "./title/index.vue";
+import QToast from "./toast/index.vue";
 import QTree from "./tree/index.vue";
 import QTreeNode from "./treeNode/index.vue";
 
@@ -56,6 +57,7 @@ export default {
     QText,
     QTheme,
     QTitle,
+    QToast,
     QTree,
     QTreeNode,
 }

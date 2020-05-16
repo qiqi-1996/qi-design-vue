@@ -100,6 +100,11 @@ export default [
         component: ()=>import(/* webpackChunkName: "theme" */"./theme/index.vue"),
     },
     {
+        name: "toast",
+        path: "toast",
+        component: ()=>import(/* webpackChunkName: "toast" */"./toast/index.vue"),
+    },
+    {
         name: "tree",
         path: "tree",
         component: ()=>import(/* webpackChunkName: "tree" */"./tree/index.vue"),

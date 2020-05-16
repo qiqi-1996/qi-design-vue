@@ -17,6 +17,9 @@
         "collapse": "Collapse",
         "popover": "Popover",
 
+        "type-of-api": "API",
+        "toast": "Toast Message",
+
         "type-of-display": "Display",
         "theme": "Theme",
         "panel": "Panel",
@@ -44,6 +47,9 @@
         "menu": "菜单",
         "collapse": "收缩面板",
         "popover": "弹出框",
+
+        "type-of-api": "API",
+        "toast": "Toast 消息",
 
         "type-of-display": "呈现类组件",
         "theme": "主题",

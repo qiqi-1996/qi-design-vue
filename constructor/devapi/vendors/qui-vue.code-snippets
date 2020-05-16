@@ -81,6 +81,18 @@
             "</script>"
         ]
     },
+    "Document Template Markdown": {
+        "scope": "markdown",
+        "prefix": ["document-template-markdown", "dtm"],
+        "body": [
+            "# {1:Name} <strong>{2:Identity}</strong>",
+            "## {{ $t(\"common.usage.preview\") }}",
+            "<example></example>",
+            "## {{ $t(\"common.usage.usage\") }}",
+            "{{ $t(\"common.usage.usage-tips\") }}",
+            "## {{ $t(\"common.usage.property\") }}"
+        ]
+    },
     "i18n": {
         "scope": "vue",
         "prefix": ["i18n"],

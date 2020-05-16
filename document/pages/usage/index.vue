@@ -118,6 +118,22 @@ export default {
                 //     imageDark: require("./icons/tree_dark.png"),
                 // },
 
+                /******* API *******/
+
+                {
+                    type: "divider"
+                },
+                {
+                    type: "category",
+                    title: "type-of-api"
+                },
+                {
+                    to: "/usage/toast",
+                    title: "toast",
+                    imageLight: require("./icons/toast_light.png"),
+                    imageDark: require("./icons/toast_dark.png"),
+                },
+
                 /******* 呈现类组件 *******/
 
                 {
