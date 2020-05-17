@@ -32,9 +32,9 @@ export default {
         },
         duang(liked){
             if(liked){
-                this.$qidesign.toast(this.$t("me-too"));
+                this.$qidesign.toast(this.$t("me-too"), { scope: this });
             }else{
-                this.$qidesign.toast(this.$t("me-neither"));
+                this.$qidesign.toast(this.$t("me-neither"), { scope: this });
             }
         }
     }

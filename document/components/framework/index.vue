@@ -11,6 +11,7 @@
             <q-menu class="language" @select="handleLanguageSelect" :data="LanguageList" v-model="LanguageOpen" size="small" full>
                 <q-button icon="earth" size="small" @click="toggleLanguageMenu">Language</q-button>
             </q-menu>
+            <q-button icon="open" size="small" href="https://github.com/qiqi-1996/qi-design-vue">GitHub</q-button>
             <q-footnote class="tips" v-show="$i18n.locale!='zh-CN'">Current language is not fully translated.</q-footnote>
         </div>
 

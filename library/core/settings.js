@@ -4,6 +4,8 @@ export default {
 
     defaults: {
         toast_duration: 3000,
+        toast_theme: "light",
+        toast_color: "poe",
 
         typography_mode: "single",
         title_mode: "",

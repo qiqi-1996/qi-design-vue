@@ -97,8 +97,8 @@ export default {
             }
             return p;
         },
-        findThemeNode() {
-            var p = this.$parent
+        findThemeNode(scope) {
+            var p = scope?.$parent || this.$parent;
             while (p) {
                 if(p._theme || p._color) {
                     return p
