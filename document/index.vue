@@ -1,7 +1,7 @@
 <template>
     <q-theme :theme="store.theme" :color="store.color">
         <q-panel class="stage">
-            <theme-switcher></theme-switcher>
+            <theme-switcher class="hidden-mobile"></theme-switcher>
             <framework></framework>
         </q-panel>
     </q-theme>

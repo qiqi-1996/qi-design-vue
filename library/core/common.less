@@ -14,3 +14,27 @@ BODY {
     display: block;
     clear: both;
 }
+
+@media screen and (min-width: @responsive-mobile) {
+
+    .hidden-mobile {
+        display: block !important;
+    }
+
+    .visible-mobile {
+        display: none !important;
+    }
+
+}
+
+@media screen and (max-width: @responsive-mobile) {
+    
+    .hidden-mobile {
+        display: none !important;
+    }
+
+    .visible-mobile {
+        display: block !important;
+    }
+
+}

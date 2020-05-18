@@ -4,6 +4,11 @@
     <page>
         <div class="stage">
 
+            <q-panel class="visible-mobile mobile-tip" secondary>
+                <q-title>NOTICE</q-title>
+                <q-footnote>{{ $t("notice") }}</q-footnote>
+            </q-panel>
+
             <q-title class="title" :level="2">{{ $t("features") }}</q-title>
 
             <div class="feature-block darkmode" @click="toggleDarkMode">
@@ -171,8 +176,8 @@
     transform: scale(1.05);
 }
 
-@import "./responsive.screen.less";
-@import "./responsive.mobile.less";
+@import "./index.screen.less";
+@import "./index.mobile.less";
 </style>
 
 <script>

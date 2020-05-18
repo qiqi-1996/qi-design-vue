@@ -8,8 +8,19 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.6.2</q-title>
+            <q-footnote>2020-05-18</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 Icon</li>
+                <q-title :level="3">变更</q-title>
+                <li>基于响应式对文档首页及导航进行优化</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.6.1</q-title>
-            <q-footnote>2020-05-16</q-footnote>
+            <q-footnote>2020-05-17</q-footnote>
             <ul>
                 <q-title :level="3">变更</q-title>
                 <li>Toast 增加主题和颜色功能</li>

@@ -6,7 +6,10 @@
         "developer": "For Developer",
         "resource": "Design Resource",
         "update": "Change Log",
-        "development": "Development Tool"
+        "development": "Development Tool",
+
+        "category": "Category",
+        "settings": "Settings"
     },
     "zh-CN": {
         "summary": "简介",
@@ -15,6 +18,9 @@
         "developer": "写给开发者",
         "resource": "设计资源",
         "update": "更新日志",
-        "development": "开发环境工具"
+        "development": "开发环境工具",
+
+        "category": "目录",
+        "settings": "设置"
     }
 }

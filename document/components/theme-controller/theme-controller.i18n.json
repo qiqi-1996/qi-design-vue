@@ -1,0 +1,10 @@
+{
+    "en": {
+        "darkmode": "Dark Mode",
+        "color": "Color"
+    },
+    "zh-CN": {
+        "darkmode": "夜间模式",
+        "color": "色彩"
+    }
+}

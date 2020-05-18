@@ -61,4 +61,10 @@
         border-bottom: 1px solid @color-dark-decorate;
     }
 }
+
+@media screen and (max-width: @responsive-mobile) {
+    .document-container {
+        padding-bottom: 0px;
+    }
+}
 </style>

@@ -4,6 +4,7 @@ import packagejson from "../package.json";
 import webpack from "webpack";
 import VueLoaderPlugin from "vue-loader/lib/plugin";
 import PostcssPresetEnv from "postcss-preset-env";
+import postcssPxToViewport from "postcss-px-to-viewport";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
@@ -20,7 +21,15 @@ var CssRules = (function () {
             plugins: () => [
                 PostcssPresetEnv({
                     autoprefixer: true
-                })
+                }),
+                // postcssPxToViewport({
+                //     viewportWidth: 375,
+                //     unitPrecision: 2,
+                //     viewportUnit: "vw",
+                //     selectorBlackList: [".ignore"],
+                //     minPixelValue: 1,
+                //     mediaQuery: false
+                // })
             ]
         }
     },

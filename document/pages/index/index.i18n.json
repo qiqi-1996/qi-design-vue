@@ -1,5 +1,7 @@
 {
     "en": {
+        "notice": "In order to ensure that the mobile device can be able to access normally, this document was optimized by using responsive, but it does NOT mean that the Qi Design Vue is currently suitable for use on the mobile device. Please remind that this is a PC-side component library.",
+
         "features": "Features",
 
         "features-darkmode": "DARK<br>MODE",
@@ -19,6 +21,8 @@
         "features-colors-spring-description": "Claude Monet"
     },
     "zh-CN": {
+        "notice": "为了确保移动端可以正常访问，本文档进行了响应式优化，但并不代表 Qi Design Vue 组件库当前适合在移动端使用，请记住这是一个 PC 端组件库。",
+
         "features": "功能特性",
 
         "features-darkmode": "暗黑模式",

@@ -87,11 +87,16 @@ const linear = [
     "right",
     "up",
     "down",
+    "arrow-left",
+    "arrow-right",
+    "arrow-up",
+    "arrow-down",
     "close",
     "plus",
     "draggable",
 
     // 软件元素
+    "menu",
     "link",
     "loading",
     "waiting",
@@ -135,6 +140,7 @@ const surface = [
     "paste",
 
     // 软件元素
+    "setting",
     "warning",
     "warning-circle",
     "question-circle",
