@@ -338,7 +338,7 @@ export default {
     },
     methods: {
         loadImage(url, theme) {
-            if (this.state[theme] === "done") {
+            if (this.state[theme] === "done" || !url) {
                 return;
             }
             if (

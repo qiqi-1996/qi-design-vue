@@ -4,7 +4,7 @@
 
         <menubar class="visible-mobile" :current="tabvalue" @tab-change="handleTabChange"></menubar>
 
-        <div class="header">
+        <div :class="['header', tabvalue!='1'?'minimize':'', share.layout!='default'?'hidden':'']">
             <div class="headline">
                 <q-title :level="1">QI DESIGN <br class="visible-mobile">STANDARD</q-title>
                 <q-color-block :size="8" round></q-color-block>
@@ -174,6 +174,7 @@
 
 <script>
 import store from "document/store.js";
+import share from "./share.js";
 import languages from "document/i18n/languages.json";
 import Menubar from "./menubar.vue";
 import { TabValueMap, ValueRouteMap } from "./tab-map.js";
@@ -185,6 +186,7 @@ export default {
     data(){
         return {
             development: false,
+            share,
 
             tabvalue: "1",
             direction: "left",

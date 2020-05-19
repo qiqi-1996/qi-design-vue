@@ -2,6 +2,7 @@
     <q-hover :active="active" :config="config">
         <q-image :theme="imageTheme" :src="imageLight" :src-dark="imageDark" width="auto" height="32px"></q-image>
         <span class="title"><slot></slot></span>
+        <q-icon class="entry visible-mobile" name="right"></q-icon>
     </q-hover>
 </template>
 
@@ -27,6 +28,8 @@
         margin-right: 2*@grid;
     }
 }
+
+@import "./item.mobile.less";
 </style>
 
 <script>

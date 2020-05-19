@@ -8,6 +8,18 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.6.3</q-title>
+            <q-footnote>2020-05-19</q-footnote>
+            <ul>
+                <q-title :level="3">修复</q-title>
+                <li>修复 Image 组件的加载 BUG</li>
+                <q-title :level="3">变更</q-title>
+                <li>优化移动端 Menubar 呈现</li>
+                <li>SideRouter 组件响应式处理</li>
+            </ul>
+
+            <q-divider></q-divider>
+            
             <q-title :level="1" colorful>Version 0.6.2</q-title>
             <q-footnote>2020-05-18</q-footnote>
             <ul>

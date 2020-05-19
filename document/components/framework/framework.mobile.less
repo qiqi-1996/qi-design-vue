@@ -1,6 +1,7 @@
 @media screen and (max-width: @responsive-mobile) {
 
     .header {
+        .transition(all, 1s);
         padding: 5*@grid;
         padding-top: 12*@grid + 5*@grid;
         padding-bottom: 12*@grid;
@@ -16,6 +17,24 @@
             }
         }
         
+    }
+
+    .minimize {
+        max-height: 265px;
+        padding-top: 8*@grid;
+        padding-bottom: 4*@grid;
+
+        .headline .edition {
+            margin-top: 2*@grid;
+            margin-bottom: 2*@grid;
+        }
+    }
+
+    .hidden {
+        max-height: 0px;
+        padding: 0px;
+        opacity: 0;
+        overflow: hidden;
     }
 
 }

@@ -1,0 +1,31 @@
+@media screen and (max-width: @responsive-mobile) {
+    .layout-left {
+        float: none;
+        width: auto;
+        margin: 0px;
+        margin-top: 8*@grid;
+        overflow: visible !important;
+    }
+
+    .layout-right {
+        float: none;
+        width: auto;
+        margin: 0px;
+        padding: 0px;
+
+        .center {
+            margin: 4*@grid !important;
+        }
+
+        .document-container {
+            width: calc(~"100% -"2*4*@grid);
+            top: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+
+    .router-divider {
+        width: 100% !important;
+    }
+}

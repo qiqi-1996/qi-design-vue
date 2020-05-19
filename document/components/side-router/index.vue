@@ -1,6 +1,6 @@
 <template>
     <div class="container clearfloat">
-        <div class="layout-left">
+        <div :class="['layout-left', !open?'':'hidden-mobile']">
             <div style="margin: 0px">
                 <div v-for="(item, index) in data" :key="index">
 
@@ -24,10 +24,10 @@
 
                 </div>
 
-                <q-divider class="vertical-divider" type="vertical"></q-divider>
+                <q-divider class="vertical-divider hidden-mobile" type="vertical"></q-divider>
             </div>
         </div>
-        <div class="layout-right">
+        <div :class="['layout-right', open?'':'hidden-mobile']">
             <div class="center" style="margin: 120px;">
                 <transition :name="direction">
                     <router-view class="router-view"></router-view>
@@ -131,9 +131,14 @@
     // transform: scale(0.9);
     opacity: 0;
 }
+
+/******* Responsive *******/
+
+@import "./side-router.mobile.less";
 </style>
 
 <script>
+import FrameworkShare from "document/components/framework/share.js";
 import item from "./item.vue";
 
 export default {
@@ -151,8 +156,16 @@ export default {
     data(){
         return {
             current: 0,
-            direction: "up"
+            direction: "up",
+            FrameworkShare,
+            open: false
         }
+    },
+    mounted(){
+        this.FrameworkShare.$on("side-router-back", ()=>{
+            this.open = false;
+            this.FrameworkShare.layout = "default"
+        });
     },
     methods: {
         isActive(route){
@@ -166,6 +179,8 @@ export default {
                 this.direction = "down";
             }
             this.current = index;
+            this.open = true;
+            this.FrameworkShare.layout = "side-router";
             this.$nextTick(()=>{
                 this.$router.push({path: option.to});
             })
