@@ -3,7 +3,7 @@
         <slot></slot>
 
         <div :class="contentClassName" @click.stop>
-            <transition mode="in-out">
+            <transition>
                 <div v-if="vvalue">
                     <q-panel class="content-panel customize-content" border v-if="$slots.content">
                         <div class="indicator"></div>
@@ -33,6 +33,7 @@
 
     .content {
         position: absolute;
+        pointer-events: none;
         .transition();
         .content-panel {
             box-shadow: @color-light-secondary-background 0px 8px 0px -4px;
@@ -41,6 +42,7 @@
 
     .content[class*="actived"] {
         padding: 2*@grid;
+        pointer-events: unset;
     }
 
     .template-content {
@@ -271,7 +273,7 @@
     }
 }
 
-.q-popover[class*="actived"] {
+.q-popover[class*="actived"] .content {
     z-index: @top;
 }
 </style>
