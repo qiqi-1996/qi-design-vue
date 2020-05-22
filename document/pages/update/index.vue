@@ -8,6 +8,16 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.6.4</q-title>
+            <q-footnote>2020-05-19</q-footnote>
+            <ul>
+                <q-title :level="3">修复</q-title>
+                <li>修复 Checkbox 图标错位问题</li>
+                <li>修复 Popover 组件的层级问题</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.6.3</q-title>
             <q-footnote>2020-05-19</q-footnote>
             <ul>
@@ -16,6 +26,7 @@
                 <q-title :level="3">变更</q-title>
                 <li>优化移动端 Menubar 呈现</li>
                 <li>SideRouter 组件响应式处理</li>
+                <li>文档增加 Radio、Checkbox 组件英语翻译</li>
             </ul>
 
             <q-divider></q-divider>

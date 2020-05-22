@@ -48,8 +48,13 @@
 
     .q-icon {
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: 1px;
+        left: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
         font-weight: bolder;
     }
 }

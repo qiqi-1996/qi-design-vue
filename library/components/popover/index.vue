@@ -270,6 +270,10 @@
         box-shadow: @color-dark-secondary-background 0px 8px 0px -4px;
     }
 }
+
+.q-popover[class*="actived"] {
+    z-index: @top;
+}
 </style>
 
 <script>
