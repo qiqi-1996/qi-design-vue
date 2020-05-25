@@ -16,5 +16,11 @@ export default {
         image_lazy: false,
         image_loading: false,
         image_error: false,
+
+        avatar_shape: "square",
+        avatar_size: "normal",
+        avatar_lazy: undefined,
+        avatar_loading: undefined,
+        avatar_error: undefined,
     }
 }

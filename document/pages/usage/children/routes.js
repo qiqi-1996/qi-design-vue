@@ -5,6 +5,11 @@ export default [
         component: ()=>import(/* webpackChunkName: "404" */"./404/index.vue"),
     },
     {
+        name: "avatar",
+        path: "avatar",
+        component: ()=>import(/* webpackChunkName: "avatar" */"./avatar/index.vue"),
+    },
+    {
         name: "badge",
         path: "badge",
         component: ()=>import(/* webpackChunkName: "badge" */"./badge/index.vue"),

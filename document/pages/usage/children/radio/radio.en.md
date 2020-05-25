@@ -15,7 +15,7 @@
 
 By binding to the same variable through <strong>v-model</strong> and providing the property of <strong>value</strong> as the selected value, you can achieve the effect of single selection.
 
-## {{ $t("common.usage.usage-tips") }}
+{{ $t("common.usage.usage-tips") }}
 
 ## {{ $t("common.usage.property") }}
 

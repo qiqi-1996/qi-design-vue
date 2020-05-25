@@ -76,7 +76,8 @@ export default {
                         video: ["src", "poster"],
                         source: "src",
                         img: "src",
-                        "q-image": ["src", "src-dark"]
+                        "q-image": ["src", "src-dark"],
+                        "q-avatar": ["src", "src-dark"],
                     }
                 }
             },

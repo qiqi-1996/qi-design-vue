@@ -162,6 +162,12 @@ export default {
                     imageDark: require("./icons/image_dark.png"),
                 },
                 {
+                    to: "/usage/avatar",
+                    title: "avatar",
+                    imageLight: require("./icons/avatar_light.png"),
+                    imageDark: require("./icons/avatar_dark.png"),
+                },
+                {
                     to: "/usage/typography",
                     title: "typography",
                     imageLight: require("./icons/typography_light.png"),

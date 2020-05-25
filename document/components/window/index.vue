@@ -64,7 +64,8 @@
         font-size: 12px;
         position: absolute;
         margin: 0px;
-        margin-top: @grid;
+        margin-top: @grid + 4px;
+        margin-right: 4px;
         top: 0px;
         right: @grid;
 

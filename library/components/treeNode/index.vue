@@ -7,7 +7,7 @@
             @click="toggleVExpand"
             :style="{ paddingLeft: levelPaddingLeft }"
             :hover="empty?{ color: 'none', border: 'none'}:{}"
-            :actived="{color:'inherit'}"
+            :actived="{ color:'inherit', text: 'poe'}"
             :active="vacancy==='inside'"
 
             :draggable="!empty"

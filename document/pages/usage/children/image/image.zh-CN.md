@@ -14,7 +14,7 @@
 
 ### 配置 Vue Loader
 
-当我们在 Vue 单文件组件中引入图片时（尤其是本地图片资源） `<img src="picture.jpg" />`，实际上是 Vue Loader 将该语句自动处理成了 `<img :src="require('picture.jpg')">`，然后 picture.jpg 才得以被 file-loader 等模块处理。因此，要想让 q-image 组件也可以直接引入图片资源，需要配置 Vue Loader 以支持这一特性，下方给出了大致的配置例子，你也可以查看 [Vue Loader 官方文档](https://vue-loader.vuejs.org/zh/guide/asset-url.html) 以了解更多。
+当我们在 Vue 单文件组件中引入本地图片时 `<img src="picture.jpg" />`，实际上是 Vue Loader 将该语句自动处理成了 `<img :src="require('picture.jpg')">`，然后 picture.jpg 才得以被 file-loader 等模块处理。因此，要想让 q-image 组件也可以直接引入图片资源，需要配置 Vue Loader 以支持这一特性，下方给出了大致的配置例子，你也可以查看 [Vue Loader 官方文档](https://vue-loader.vuejs.org/zh/guide/asset-url.html) 以了解更多。
 
 ```javascript
 rules: [{
@@ -22,7 +22,9 @@ rules: [{
     loader: "vue-loader",
     options: {
         transformAssetUrls: {
-            "q-image": ["src", "src-dark"]
+            "q-image": ["src", "src-dark"],
+            "q-avatar": ["src", "src-dark"],
+            // QAvatar 也有可能涉及本地图片引用
         }
     }
 }]
@@ -46,7 +48,7 @@ rules: [{
     </property-item>
     <property-item
         name="src-dark"
-        definition="暗夜模式的图片资源，如果没有设置该属性，则在暗夜模式时使用 0.75 透明度的 src 属性的图像。"
+        definition="暗夜模式的图片资源，如果没有设置该属性，则在暗夜模式时使用 0.7 透明度的 src 属性的图像。"
         values="String"
     >
     </property-item>

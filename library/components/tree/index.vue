@@ -73,6 +73,12 @@ export default {
         handleDragEnd(targetNode){
             let data = Array.from(this.data);
 
+            console.log(targetNode.index.slice(0, (this.sourceNode.index.length)).join(""), this.sourceNode.index.join(""));
+            if(targetNode.index.slice(0, (this.sourceNode.index.length)).join("") === this.sourceNode.index.join("")){
+                // 父级被拖到子级内
+                return;
+            }
+
             let source = data;
             let sourceArray = data;
             let sourceMarkID = utils.id();
@@ -90,7 +96,6 @@ export default {
 
             // console.log(source, sourceArray);
 
-            console.log(targetNode);
             let target = data;
             let targetArray = data;
             let targetMarkID = utils.id();

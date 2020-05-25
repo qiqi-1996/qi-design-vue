@@ -10,8 +10,8 @@ export default {
         return {
             components: { example },
             i18n: {
-                "en": ()=>import("./input.en.md"),
-                "zh-CN": ()=>import("./input.zh-CN.md"),
+                "en": ()=>import("./avatar.en.md"),
+                "zh-CN": ()=>import("./avatar.zh-CN.md"),
             }
         }
     }

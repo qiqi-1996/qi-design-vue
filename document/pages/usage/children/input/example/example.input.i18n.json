@@ -1,0 +1,16 @@
+{
+    "en": {
+        "title": "Login",
+        "account": "Account",
+        "password": "Password",
+        "login": "Login",
+        "register": "Register"
+    },
+    "zh-CN": {
+        "title": "登录",
+        "account": "账户",
+        "password": "密码",
+        "login": "登录",
+        "register": "注册"
+    }
+}

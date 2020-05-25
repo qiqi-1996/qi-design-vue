@@ -1,3 +1,4 @@
+import QAvatar from "./avatar/index.vue";
 import QBadge from "./badge/index.vue";
 import QButton from "./button/index.vue";
 import QCheckbox from "./checkbox/index.vue";
@@ -30,6 +31,7 @@ import QTree from "./tree/index.vue";
 import QTreeNode from "./treeNode/index.vue";
 
 export default {
+    QAvatar,
     QBadge,
     QButton,
     QCheckbox,

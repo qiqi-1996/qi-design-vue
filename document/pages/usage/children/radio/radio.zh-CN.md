@@ -14,7 +14,7 @@
 ```
 通过 <strong>v-model</strong> 绑定至同一个变量，并提供 <strong>value</strong> 作为选中的值，即可实现单选的效果。
 
-## {{ $t("common.usage.usage-tips") }}
+{{ $t("common.usage.usage-tips") }}
 
 ## {{ $t("common.usage.property") }}
 
