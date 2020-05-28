@@ -1,6 +1,11 @@
-export default {
+var settings = {
     // theme: "light", 
     // color: "poe",
+
+    global: {
+        theme: "light",
+        color: "poe"
+    },
 
     defaults: {
         toast_duration: 3000,
@@ -23,4 +28,10 @@ export default {
         avatar_loading: undefined,
         avatar_error: undefined,
     }
+}
+
+export default settings;
+
+export function replaceSettingsObject(obj) {
+    settings = obj;
 }

@@ -12,7 +12,7 @@
 @import "~@qiqi1996/qi-design-vue/core/standard.less";
 
 .q-toast {
-    z-index: @top;
+    z-index: @top + 100;
     position: fixed;
     left: 50%;
     bottom: 38.2%;

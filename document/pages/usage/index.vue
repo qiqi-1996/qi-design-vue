@@ -1,4 +1,5 @@
 <i18n src="./usage.i18n.json"></i18n>
+
 <template>
     <side-router :data="data" :i18n="$t.bind(this)"></side-router>
 </template>
@@ -154,6 +155,12 @@ export default {
                     title: "panel",
                     imageLight: require("./icons/panel_light.png"),
                     imageDark: require("./icons/panel_dark.png"),
+                },
+                {
+                    to: "/usage/mask",
+                    title: "mask",
+                    imageLight: require("./icons/mask_light.png"),
+                    imageDark: require("./icons/mask_dark.png"),
                 },
                 {
                     to: "/usage/image",

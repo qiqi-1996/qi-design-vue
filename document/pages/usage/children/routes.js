@@ -60,6 +60,11 @@ export default [
         component: ()=>import(/* webpackChunkName: "install" */"./install/index.vue"),
     },
     {
+        name: "mask",
+        path: "mask",
+        component: ()=>import(/* webpackChunkName: "mask" */"./mask/index.vue"),
+    },
+    {
         name: "menu",
         path: "menu",
         component: ()=>import(/* webpackChunkName: "menu" */"./menu/index.vue"),

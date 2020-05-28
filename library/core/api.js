@@ -18,7 +18,29 @@ function toast(message, options = {}) {
     utils.event.emit("q-message-toast", message, opt);
 }
 
+function open(name, options) {
+    if (options?.type) {
+        utils.event.emit(`q-${options.type}-${name}-do-open`);
+    } else {
+        ["mask"].forEach(type => {
+            utils.event.emit(`q-${type}-${name}-do-open`);
+        })
+    }
+}
+
+function close(name, options) {
+    if (options?.type) {
+        utils.event.emit(`q-${options.type}-${name}-do-close`);
+    } else {
+        ["mask"].forEach(type => {
+            utils.event.emit(`q-${type}-${name}-do-close`);
+        })
+    }
+}
+
 export default {
     mixins,
-    toast
+    toast,
+    open,
+    close
 }

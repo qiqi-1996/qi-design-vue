@@ -1,4 +1,5 @@
 import Vue from "vue";
+import settings from "@qiqi1996/qi-design-vue/core/settings.js";
 
 const vm = new Vue({
     data() {
@@ -17,6 +18,14 @@ const vm = new Vue({
                 } else {
                     this.theme = "light"
                 }
+                settings.global.theme = this.theme;
+                settings.defaults.toast_theme = this.theme;
+            },
+            immediate: true
+        },
+        color: {
+            handler(newValue) {
+                settings.global.color = newValue;
             },
             immediate: true
         }

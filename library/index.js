@@ -1,7 +1,7 @@
 import "./core/common.less";
 
 import components from "./components";
-import settings from "./core/settings.js";
+import settings, { replaceSettingsObject } from "./core/settings.js";
 import api from "./core/api.js";
 
 import QGlobal from "./global.vue";
@@ -17,6 +17,13 @@ function install(Vue) {
 
     let container = document.createElement("div");
     document.body.appendChild(container);
+
+    replaceSettingsObject(new Vue({
+        data() { 
+            return settings;
+        }
+    }))
+
     vm = new Vue({
         el: container,
         render: h => h(QGlobal)

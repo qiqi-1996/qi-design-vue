@@ -45,6 +45,7 @@ export default [
         name: "update",
         path: "/update",
         component: ()=>import(/* webpackChunkName: "update" */"./update/index.vue"),
+        children: require(/* webpackChunkName: "update" */"./update/children/routes.js").default,
     },
     {
         name: "usage",

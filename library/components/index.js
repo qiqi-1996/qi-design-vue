@@ -12,6 +12,7 @@ import QHover from "./hover/index.vue";
 import QIcon from "./icon/index.vue";
 import QImage from "./image/index.vue";
 import QInput from "./input/index.vue";
+import QMask from "./mask/index.vue";
 import QMenu from "./menu/index.vue";
 import QPanel from "./panel/index.vue";
 import QPopover from "./popover/index.vue";
@@ -45,6 +46,7 @@ export default {
     QIcon,
     QImage,
     QInput,
+    QMask,
     QMenu,
     QPanel,
     QPopover,

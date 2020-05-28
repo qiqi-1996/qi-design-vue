@@ -1,0 +1,16 @@
+{
+    "en": {
+        "click-to-close": "Click to close",
+        "click-anywhere-to-close": "Click anywhere to close",
+        "open-fullscreen": "Click to open a fullscreen mask",
+        "open-window": "Click to open a window size mask and can not close by click the mask itself",
+        "open-global": "Click to open the global mask"
+    },
+    "zh-CN": {
+        "click-to-close": "点击关闭",
+        "click-anywhere-to-close": "点击任意位置关闭",
+        "open-fullscreen": "点击打开全屏遮罩",
+        "open-window": "点击打开窗口大小的遮罩，并且不能通过点击遮罩自身而关闭",
+        "open-global": "点击打开全局遮罩"
+    }
+}

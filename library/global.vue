@@ -1,6 +1,9 @@
 <template>
     <div class="q-global">
-        <q-toast></q-toast>
+        <q-theme :theme="settings.global.theme" :color="settings.global.color">
+            <q-toast></q-toast>
+            <q-mask name="global-mask"></q-mask>
+        </q-theme>
     </div>
 </template>
 
@@ -11,3 +14,15 @@
 
 }
 </style>
+
+<script>
+import settings from "@qiqi1996/qi-design-vue/core/settings.js";
+
+export default {
+    computed: {
+        settings(){
+            return settings;
+        }
+    }
+}
+</script>
