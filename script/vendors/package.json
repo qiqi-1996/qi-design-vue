@@ -1,6 +1,6 @@
 {
   "name": "@qiqi1996/qi-design-vue",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Qi Design Standard | An implement for Web UI components based on Vue.",
   "main": "library.js",
   "homepage": "https://github.com/qiqi-1996/qi-design-vue#readme",

@@ -7,6 +7,15 @@
                 <q-footnote>Bug 修复、样式调整将提升 修正版本号（Revision Number）</q-footnote>
             </q-panel>
 
+            <q-title :level="1" colorful>Version 0.9.0</q-title>
+            <q-footnote>2020-05-30</q-footnote>
+            <ul>
+                <q-title :level="3">新增</q-title>
+                <li>新增 API 方法：$qidesign.isSystemDarkmode() 用于检测系统是否处于夜间模式</li>
+            </ul>
+
+            <q-divider></q-divider>
+
             <q-title :level="1" colorful>Version 0.8.0</q-title>
             <q-footnote>2020-05-28</q-footnote>
             <ul>

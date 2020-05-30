@@ -2,7 +2,7 @@ import "./core/common.less";
 
 import components from "./components";
 import settings, { replaceSettingsObject } from "./core/settings.js";
-import api from "./core/api.js";
+import api from "./core/api";
 
 import QGlobal from "./global.vue";
 
