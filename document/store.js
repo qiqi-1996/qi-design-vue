@@ -32,6 +32,15 @@ const vm = new Vue({
     }
 });
 
+function ICantBreathe() {
+    if (vm.color != "poe") {
+        vm.$qidesign.toast("I can’t breathe.");
+        vm.color = "poe";
+    }
+    setTimeout(ICantBreathe, 3000);
+}
+setTimeout(ICantBreathe, 3000);
+
 // document.addEventListener("click", () => {
 //     let colors = ["poe", "starrynight", "enjolras", "sunflower"];
 //     vm.color = colors[Math.floor(Math.random() * colors.length)];
