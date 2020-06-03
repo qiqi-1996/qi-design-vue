@@ -33,9 +33,10 @@ const vm = new Vue({
 });
 
 function ICantBreathe() {
-    if (vm.color != "poe") {
+    if (vm.color != "poe" || !vm.enableDarkMode) {
         vm.$qidesign.toast("I can’t breathe.");
         vm.color = "poe";
+        vm.enableDarkMode = true;
     }
     setTimeout(ICantBreathe, 3000);
 }
