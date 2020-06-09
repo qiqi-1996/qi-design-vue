@@ -12,7 +12,7 @@
                     <q-panel class="content-panel template-content" border v-else :style="{ width }">
                         <div class="indicator"></div>
                         <q-title class="title" :level="6" v-if="title">{{title}}</q-title>
-                        <q-text class="text" v-if="text">{{text}}</q-text>
+                        <q-text class="text" v-if="text" :style="{ textAlign }">{{text}}</q-text>
                         <div class="controller" v-if="confirmText || cancelText">
                             <q-button size="small" v-if="cancelText" @click.stop="doEmitClickEvent('cancel')">{{cancelText}}</q-button>
                             <q-button size="small" type="primary" v-if="confirmText" @click.stop="doEmitClickEvent('confirm')">{{confirmText}}</q-button>
@@ -314,6 +314,13 @@ export default {
         },
         title: String,
         text: String,
+        textAlign: {
+            type: String,
+            default: "left",
+            validator(value){
+                return utils.validator(value).belongsTo("left", "center", "right", "justify")
+            }
+        },
         confirmText: String,
         cancelText: String,
     },

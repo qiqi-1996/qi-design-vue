@@ -8,7 +8,7 @@
             "events": "Events"
         }
     },
-    "zh-CN": {
+    "zh": {
         "usage": {
             "usage": "使用方法",
             "usage-tips": "更复杂/完整的使用方法，请点击上方预览窗口中的“查看源码”",

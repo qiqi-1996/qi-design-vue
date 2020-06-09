@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./radio.en.md"),
-                "zh-CN": ()=>import("./radio.zh-CN.md"),
+                "zh": ()=>import("./radio.zh.md"),
             }
         }
     }

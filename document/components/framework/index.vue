@@ -18,7 +18,7 @@
                 </q-menu>
 
                 <q-button icon="open" size="small" href="https://github.com/qiqi-1996/qi-design-vue">GitHub</q-button>
-                <q-footnote class="tips" v-show="$i18n.locale!='zh-CN'">Current language is not fully translated.</q-footnote>
+                <q-footnote class="tips" v-show="$i18n.locale!='zh'">Current language is not fully translated.</q-footnote>
             </span>
 
             <span class="visible-mobile">
@@ -27,7 +27,7 @@
                 </q-menu>
 
                 <q-button icon="open" href="https://github.com/qiqi-1996/qi-design-vue">GitHub</q-button>
-                <q-footnote class="tips" v-show="$i18n.locale!='zh-CN'">Current language is not fully translated.</q-footnote>
+                <q-footnote class="tips" v-show="$i18n.locale!='zh'">Current language is not fully translated.</q-footnote>
             </span>
         </div>
 

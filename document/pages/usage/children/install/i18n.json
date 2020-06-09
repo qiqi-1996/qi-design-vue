@@ -6,7 +6,7 @@
         "h2#1": "Package Manager",
         "h2#1-p#1": "It is easier to maintain the project through the package manager and build tools. Take the NPM package manager as an example: install and save the component library through the command <strong>npm install --save @ qiqi1996/qi-design-vue</strong> rely. Then, use the following code to import and register the component library in the entry file of the project."
     },
-    "zh-CN": {
+    "zh": {
         "h1#1": "安装和使用",
         "recommand": "推荐",
 

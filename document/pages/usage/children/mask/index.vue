@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./mask.en.md"),
-                "zh-CN": ()=>import("./mask.zh-CN.md"),
+                "zh": ()=>import("./mask.zh.md"),
             }
         }
     }

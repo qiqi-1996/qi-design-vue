@@ -13,7 +13,7 @@ export default {
             },
             i18n: {
                 "en": ()=>import("./toast.en.md"),
-                "zh-CN": ()=>import("./toast.zh-CN.md"),
+                "zh": ()=>import("./toast.zh.md"),
             }
         }
     }

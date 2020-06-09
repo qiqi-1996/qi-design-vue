@@ -10,7 +10,7 @@ export default {
         return {
             i18n: {
                 "en": ()=>import("./image.en.md"),
-                "zh-CN": ()=>import("./image.zh-CN.md"),
+                "zh": ()=>import("./image.zh.md"),
             },
             components: {
                 example

@@ -18,7 +18,7 @@
         "menu-edit-paste": "Paste",
         "description": "Here is the effect you can achieve with the Menu component. I added some code to implement the so-called \"menu bar\" for most applications (but the Menu component is not the overall menu bar). Because I hope it can be attached to most elements, for example:"
     },
-    "zh-CN": {
+    "zh": {
         "title": "假装这是一个应用",
         "menu-file": "文件",
         "menu-edit": "编辑",

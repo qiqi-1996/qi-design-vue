@@ -31,8 +31,21 @@ const router = new VueRouter({
     base: location.pathname
 })
 
+var locale = "en";
+const currentLanguage = navigator.language;
+const supportLanguage = ["en", "zh"]
+if (supportLanguage.indexOf(currentLanguage) != -1) {
+    locale = currentLanguage
+} else {
+    for (let lang of supportLanguage) {
+        if (currentLanguage.indexOf(lang) == 0) {
+            locale = lang;
+            break;
+        }
+    }
+}
 store.i18n = new VueI18N({
-    locale: "zh-CN",
+    locale,
     silentFallbackWarn: true,
     messages
 })

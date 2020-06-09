@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./checkbox.en.md"),
-                "zh-CN": ()=>import("./checkbox.zh-CN.md"),
+                "zh": ()=>import("./checkbox.zh.md"),
             }
         }
     }

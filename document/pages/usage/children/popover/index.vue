@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./popover.en.md"),
-                "zh-CN": ()=>import("./popover.zh-CN.md"),
+                "zh": ()=>import("./popover.zh.md"),
             }
         }
     }

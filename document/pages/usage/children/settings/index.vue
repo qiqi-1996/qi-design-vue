@@ -8,7 +8,7 @@ export default {
         return {
             i18n: {
                 "en": ()=>import("./settings.en.md"),
-                "zh-CN": ()=>import("./settings.zh-CN.md"),
+                "zh": ()=>import("./settings.zh.md"),
             }
         }
     }

@@ -6,7 +6,7 @@
         "open-window": "Click to open a window size mask and can not close by click the mask itself",
         "open-global": "Click to open the global mask"
     },
-    "zh-CN": {
+    "zh": {
         "click-to-close": "点击关闭",
         "click-anywhere-to-close": "点击任意位置关闭",
         "open-fullscreen": "点击打开全屏遮罩",

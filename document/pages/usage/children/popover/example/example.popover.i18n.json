@@ -12,7 +12,7 @@
         "confirm": "Confirm",
         "cancel": "Cancel"
     },
-    "zh-CN": {
+    "zh": {
         "click-me": "点击此处",
         "hover-me": "鼠标悬浮此处",
         "title": "弹出框标题",

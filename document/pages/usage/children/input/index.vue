@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./input.en.md"),
-                "zh-CN": ()=>import("./input.zh-CN.md"),
+                "zh": ()=>import("./input.zh.md"),
             }
         }
     }

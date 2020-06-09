@@ -11,7 +11,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./avatar.en.md"),
-                "zh-CN": ()=>import("./avatar.zh-CN.md"),
+                "zh": ()=>import("./avatar.zh.md"),
             }
         }
     }

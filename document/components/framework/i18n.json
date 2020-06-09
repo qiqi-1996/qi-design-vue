@@ -11,7 +11,7 @@
         "category": "Category",
         "settings": "Settings"
     },
-    "zh-CN": {
+    "zh": {
         "summary": "简介",
         "usage": "组件使用",
         "designer": "写给设计师",

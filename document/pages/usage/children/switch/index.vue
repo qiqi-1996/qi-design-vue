@@ -10,7 +10,7 @@ export default {
             components: { example },
             i18n: {
                 "en": ()=>import("./switch.en.md"),
-                "zh-CN": ()=>import("./switch.zh-CN.md"),
+                "zh": ()=>import("./switch.zh.md"),
             }
         }
     }

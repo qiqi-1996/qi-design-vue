@@ -86,6 +86,15 @@
         </q-popover>
     </property-item>
     <property-item
+        name="textAlign"
+        definition="Set the text content of the built-in style of the pop-up box"
+        values="String"
+    >
+        <q-popover text="Popup text content">
+            <q-button>Hover Me</q-button>
+        </q-popover>
+    </property-item>
+    <property-item
         name="confirmText"
         definition="Set the confirm button text of the built-in style of the pop-up box"
         values="String"

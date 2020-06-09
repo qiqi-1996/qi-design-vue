@@ -73,7 +73,7 @@
             "\t\t\tcomponents: {},",
             "\t\t\ti18n: {",
             "\t\t\t\t\"en\": ()=>import(\"./${1:name}.en.md\"),",
-            "\t\t\t\t\"zh-CN\": ()=>import(\"./${1:name}.zh-CN.md\"),",
+            "\t\t\t\t\"zh\": ()=>import(\"./${1:name}.zh.md\"),",
             "\t\t\t}",
             "\t\t}",
             "\t}",

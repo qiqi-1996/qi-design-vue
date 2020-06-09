@@ -12,7 +12,7 @@
         "common-color": "Control color, preferentially inherited from the parent.",
         "common-details": "Checkout the Theme component"
     },
-    "zh-CN": {
+    "zh": {
         "property": "属性名",
         "definition": "释义",
         "defaults": "默认值",

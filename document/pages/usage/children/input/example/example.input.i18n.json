@@ -6,7 +6,7 @@
         "login": "Login",
         "register": "Register"
     },
-    "zh-CN": {
+    "zh": {
         "title": "登录",
         "account": "账户",
         "password": "密码",
