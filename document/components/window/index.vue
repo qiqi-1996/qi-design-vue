@@ -1,7 +1,7 @@
 <i18n src="./i18n.json"></i18n>
 
 <template>
-    <q-panel :class="className" border>
+    <q-panel :class="className" border shadow>
         <div class="title-bar">
             <div class="controller">
                 <q-color-block :size="12" round color="enjolras" class="item"></q-color-block>
@@ -24,7 +24,6 @@
     padding: 16px;
     padding-top: 32px;
     position: relative;
-    box-shadow: rgba(33, 33, 33, 0.05) 0px 6px 0px -2px;
 }
 
 .title-bar {

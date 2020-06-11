@@ -163,6 +163,12 @@ export default {
                     imageDark: require("./icons/mask_dark.png"),
                 },
                 {
+                    to: "/usage/modal",
+                    title: "modal",
+                    imageLight: require("./icons/modal_light.png"),
+                    imageDark: require("./icons/modal_dark.png"),
+                },
+                {
                     to: "/usage/image",
                     title: "image",
                     imageLight: require("./icons/image_light.png"),

@@ -53,6 +53,16 @@
     background: #262626
 }
 
+/******* Shadow *******/
+
+.q-panel[class*="theme-light"][class*="shadow"] {
+    box-shadow: @color-light-secondary-background 0px 6px 0px -2px;
+}
+
+.q-panel[class*="theme-dark"][class*="shadow"] {
+    box-shadow: @color-dark-secondary-background 0px 6px 0px -2px;
+}
+
 </style>
 
 <script>
@@ -65,6 +75,7 @@ export default {
         dashed: Boolean,
         border: Boolean,
         pure: Boolean,
+        shadow: Boolean
     },
     data(){
         return {
@@ -79,7 +90,8 @@ export default {
                 secondary: this.secondary,
                 border: this.border,
                 dashed: this.dashed,
-                pure: this.pure
+                pure: this.pure,
+                shadow: this.shadow
             });
         }
     }

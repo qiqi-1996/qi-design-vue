@@ -14,6 +14,7 @@ import QImage from "./image/index.vue";
 import QInput from "./input/index.vue";
 import QMask from "./mask/index.vue";
 import QMenu from "./menu/index.vue";
+import QModal from "./modal/index.vue";
 import QPanel from "./panel/index.vue";
 import QPopover from "./popover/index.vue";
 import QProgress from "./progress/index.vue";
@@ -48,6 +49,7 @@ export default {
     QInput,
     QMask,
     QMenu,
+    QModal,
     QPanel,
     QPopover,
     QProgress,

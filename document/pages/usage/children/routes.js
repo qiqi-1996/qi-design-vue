@@ -70,6 +70,11 @@ export default [
         component: ()=>import(/* webpackChunkName: "menu" */"./menu/index.vue"),
     },
     {
+        name: "modal",
+        path: "modal",
+        component: ()=>import(/* webpackChunkName: "modal" */"./modal/index.vue"),
+    },
+    {
         name: "panel",
         path: "panel",
         component: ()=>import(/* webpackChunkName: "panel" */"./panel/index.vue"),

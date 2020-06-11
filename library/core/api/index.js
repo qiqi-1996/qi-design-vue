@@ -20,11 +20,13 @@ function toast(message, options = {}) {
     utils.event.emit("q-message-toast", message, opt);
 }
 
+var openAndCloseComponents = ["mask", "modal"]
+
 function open(name, options) {
     if (options?.type) {
         utils.event.emit(`q-${options.type}-${name}-do-open`);
     } else {
-        ["mask"].forEach(type => {
+        openAndCloseComponents.forEach(type => {
             utils.event.emit(`q-${type}-${name}-do-open`);
         })
     }
@@ -34,7 +36,7 @@ function close(name, options) {
     if (options?.type) {
         utils.event.emit(`q-${options.type}-${name}-do-close`);
     } else {
-        ["mask"].forEach(type => {
+        openAndCloseComponents.forEach(type => {
             utils.event.emit(`q-${type}-${name}-do-close`);
         })
     }
