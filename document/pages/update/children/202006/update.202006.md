@@ -1,3 +1,12 @@
+# Version 0.10.0
+_2020-06-13_
+
+## Added
+
+* New Component: Modal
+
+---
+
 # Version 0.9.1
 _2020-06-09_
 

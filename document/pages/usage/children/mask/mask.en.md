@@ -56,7 +56,7 @@ Use `v-model` to control the mask
     </property-item>
     <property-item
         name="noclose"
-        definition="Whether to disabled the click and close"
+        definition="Whether to disabled that close by click"
         defaults="false"
         values="Boolean"
     >

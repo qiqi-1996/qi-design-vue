@@ -18,7 +18,7 @@ const Renderer = {
         return `<q-quote block>${quote}</q-quote>`
     },
     hr() {
-        return `<q-divider></q-divider>`
+        return `<q-divider style="margin: 40px;"></q-divider>`
     },
     code(code, infostring) {
         return `<codeblock lang="${infostring}">${code}</codeblock>`

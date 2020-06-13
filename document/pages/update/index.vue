@@ -4,6 +4,14 @@
     <side-router :data="data" :i18n="$t.bind(this)"></side-router>
 </template>
 
+<style lang="less" scoped>
+@import "~@qiqi1996/qi-design-vue/core/standard.less";
+
+/deep/ h2 {
+    border: none !important;
+}
+</style>
+
 <script>
 import SideRouter from "document/components/side-router/index.vue";
 
