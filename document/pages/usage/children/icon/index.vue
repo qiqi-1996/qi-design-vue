@@ -117,6 +117,14 @@ const linear = [
     "smile",
     "calm",
     "sad",
+    "male",
+    "female",
+    "gender",
+
+    // 品牌图标
+    "vue",
+    "react",
+    "flutter",
 
     // 其他
     "dot",

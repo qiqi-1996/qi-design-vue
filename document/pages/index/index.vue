@@ -9,37 +9,62 @@
                 <q-footnote>{{ $t("notice") }}</q-footnote>
             </q-panel>
 
+            <!-- Features -->
+
             <q-title class="title" :level="2">{{ $t("features") }}</q-title>
 
-            <div class="feature-block darkmode" @click="toggleDarkMode">
-                <q-image src="./features_darkmode_disable.png" mode="cover" src-dark="./features_darkmode_enable.png" :lazy="false"></q-image>
-                <div class="content">
-                    <q-title class="feature-title" v-html="$t('features-darkmode')"></q-title>
-                    <div class="darkmode-switch">
-                        <q-switch size="large" :value="store.enableDarkMode"></q-switch>
-                        <q-footnote>{{ $t("features-enable") }}</q-footnote>
+            <div class="clearfloat">
+                <!-- Dark Mode -->
+                <div class="feature-block darkmode" @click="toggleDarkMode">
+                    <q-image src="./features_darkmode_disable.png" mode="cover" src-dark="./features_darkmode_enable.png" :lazy="false"></q-image>
+                    <div class="content">
+                        <q-title class="feature-title" v-html="$t('features-darkmode')"></q-title>
+                        <div class="darkmode-switch">
+                            <q-switch size="large" :value="store.enableDarkMode"></q-switch>
+                            <q-footnote>{{ $t("features-enable") }}</q-footnote>
+                        </div>
+                    </div>
+                </div>
+                <!-- Colors -->
+                <div class="feature-block colors" :style="currentColorsBackgroundStyle" @click="nextColor">
+                    <q-color-block class="mask"></q-color-block>
+                    <div class="content">
+                        <q-theme class="theme-detector">
+                            <q-title class="feature-title" v-html="$t('features-colors')"></q-title>
+
+                            <div class="colors-info">
+                                <q-title :level="2">{{ $t(`features-colors-${currentColor}-name`) }}</q-title>
+                                <q-footnote>{{ $t(`features-colors-inspired`) }}</q-footnote>
+                                <q-title :level="3">{{ $t(`features-colors-${currentColor}-description`) }}</q-title>
+                            </div>
+
+                            <div class="colors-switch">
+                                <q-color-block v-for="(color,index) in colorList" :key="index" @click.native.stop="doColorChange(color)" :color="color" :size="24" round><q-icon name="correct" v-show="currentColor===color"></q-icon></q-color-block>
+                            </div>
+                        </q-theme>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="feature-block colors" :style="currentColorsBackgroundStyle" @click="nextColor">
-                <q-color-block class="mask"></q-color-block>
-                <div class="content">
-                    <q-theme class="theme-detector">
-                        <q-title class="feature-title" v-html="$t('features-colors')"></q-title>
+            <!-- Applications -->
 
-                        <div class="colors-info">
-                            <q-title :level="2">{{ $t(`features-colors-${currentColor}-name`) }}</q-title>
-                            <q-footnote>{{ $t(`features-colors-inspired`) }}</q-footnote>
-                            <q-title :level="3">{{ $t(`features-colors-${currentColor}-description`) }}</q-title>
-                        </div>
+            <q-title class="title" :level="2">{{ $t("applications") }}</q-title>
 
-                        <div class="colors-switch">
-                            <q-color-block v-for="(color,index) in colorList" :key="index" @click.native.stop="doColorChange(color)" :color="color" :size="24" round><q-icon name="correct" v-show="currentColor===color"></q-icon></q-color-block>
-                        </div>
-                    </q-theme>
-                </div>
+            <div class="app-list">
+                <q-panel 
+                    class="app-block" border
+                    v-for="(item, index) in appList"
+                    :key="index"
+                    @click="openURL(item.link)"
+                >
+                    <q-title :level="1" colorful>{{item.name}}</q-title>
+                    <q-image
+                        mode="cover"
+                        :src="item.image"
+                        :src-dark="item.imageDark"
+                        :style="{opacity:item.name?0.5:undefined}"
+                    ></q-image>
+                </q-panel>
             </div>
 
         </div>
@@ -176,6 +201,41 @@
     transform: scale(1.05);
 }
 
+.app-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.app-block {
+    width: calc(~"50% - 16px");
+    height: 280px;
+    position: relative;
+    margin-bottom: 4*@grid;
+    cursor: pointer;
+
+    .q-title {
+        margin: 4*@grid;
+        letter-spacing: 8px;
+        position: absolute;
+        width: calc(~"100% - "2*4*@grid);
+        bottom: 0*@grid;
+        left: 0px;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+
+    .q-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.app-block:hover {
+    transform: scale(1.05);
+}
+
 @import "./index.screen.less";
 @import "./index.mobile.less";
 </style>
@@ -206,6 +266,18 @@ export default {
                 "sunflower",
                 "enjolras",
                 "spring"
+            ],
+            appList: [
+                {
+                    link: "https://qiqi-1996.github.io/qi-sketch-exporter/",
+                    image: require("./applications/qi-sketch-exporter.png")
+                },
+                {
+                    name: "VSCode Rainbow Fart",
+                    link: "https://qiqi-1996.github.io/qi-sketch-exporter/",
+                    image: require("./applications/vscode-rainbow-fart-light.png"),
+                    imageDark: require("./applications/vscode-rainbow-fart-dark.png")
+                }
             ]
         }
     },
@@ -232,6 +304,9 @@ export default {
                 index = 0;
             }
             this.store.color = this.colorList[index];
+        },
+        openURL(url){
+            window.open(url, "__blank");
         }
     }
 }

@@ -3,8 +3,50 @@
   "name": "Qi Design Standard",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
-  "description": "",
+  "description": "Website: https://qiqi-1996.github.io/qi-design-vue/",
   "glyphs": [
+    {
+      "icon_id": "15386282",
+      "name": "gender",
+      "font_class": "gender",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "15386283",
+      "name": "female",
+      "font_class": "female",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "15386284",
+      "name": "vue",
+      "font_class": "vue",
+      "unicode": "e693",
+      "unicode_decimal": 59027
+    },
+    {
+      "icon_id": "15386285",
+      "name": "flutter",
+      "font_class": "flutter",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "15386286",
+      "name": "male",
+      "font_class": "male",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "15386287",
+      "name": "react",
+      "font_class": "react",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
     {
       "icon_id": "14761405",
       "name": "arrow-down",
