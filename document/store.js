@@ -38,7 +38,6 @@ function ICantBreathe() {
         vm.color = "poe";
         vm.enableDarkMode = true;
     }
-    setTimeout(ICantBreathe, 3000);
 }
 setTimeout(ICantBreathe, 3000);
 

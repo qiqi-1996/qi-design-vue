@@ -274,7 +274,7 @@ export default {
                 },
                 {
                     name: "VSCode Rainbow Fart",
-                    link: "https://qiqi-1996.github.io/qi-sketch-exporter/",
+                    link: "https://saekiraku.github.io/vscode-rainbow-fart/",
                     image: require("./applications/vscode-rainbow-fart-light.png"),
                     imageDark: require("./applications/vscode-rainbow-fart-dark.png")
                 }
