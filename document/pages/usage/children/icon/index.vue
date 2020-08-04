@@ -45,13 +45,13 @@
 
         </property-block>
 
-        <q-title :level="2">可用图标列表</q-title>
+        <q-title :level="2">可用图标列表 <q-footnote class="total">{{linear.length + (surface.length * 2)}}</q-footnote> </q-title>
 
-        <q-title :level="3">纯线性图标</q-title>
+        <q-title :level="3">纯线性图标 <q-footnote class="total">{{linear.length}}</q-footnote> </q-title>
 
         <icon-item v-for="(name, index) in linear" :key="'linear_'+index" :name="name"></icon-item>
 
-        <q-title :level="3">可填充图标</q-title>
+        <q-title :level="3">可填充图标 <q-footnote class="total">{{surface.length * 2}}</q-footnote> </q-title>
         <div class="filter">
             <q-footnote>筛选</q-footnote>
             <q-radio v-model="filterValue" value="all">全部</q-radio>
@@ -74,6 +74,10 @@
     display: inline-block;
     vertical-align: middle;
     margin-left: 2*@grid;
+}
+
+.total {
+    display: inline-block;
 }
 </style>
 
@@ -125,6 +129,10 @@ const linear = [
     "vue",
     "react",
     "flutter",
+    "qq",
+    "wechat",
+    "weibo",
+    "github",
 
     // 其他
     "dot",
@@ -140,6 +148,7 @@ const surface = [
     "unlock",
 
     // 文件相关
+    "home",
     "folder",
     "image",
     "trash",

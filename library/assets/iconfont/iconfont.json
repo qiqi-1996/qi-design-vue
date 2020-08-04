@@ -6,6 +6,48 @@
   "description": "Website: https://qiqi-1996.github.io/qi-design-vue/",
   "glyphs": [
     {
+      "icon_id": "16321469",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "16321470",
+      "name": "home-fill",
+      "font_class": "home-fill",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "16321471",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "16321472",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "16321473",
+      "name": "weibo",
+      "font_class": "weibo",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "16321474",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
       "icon_id": "15386282",
       "name": "gender",
       "font_class": "gender",
@@ -375,13 +417,6 @@
       "font_class": "open",
       "unicode": "e662",
       "unicode_decimal": 58978
-    },
-    {
-      "icon_id": "14155327",
-      "name": "close",
-      "font_class": "close1",
-      "unicode": "e660",
-      "unicode_decimal": 58976
     },
     {
       "icon_id": "14155328",
