@@ -9,6 +9,7 @@
         "checkbox": "Checkbox",
         "switch": "Switch",
         "input": "Input",
+        "slider": "Slider",
 
         "type-of-interaction": "Interactions",
         "button": "Button",
@@ -42,6 +43,7 @@
         "checkbox": "复选框",
         "switch": "开关",
         "input": "输入框",
+        "slider": "滑动条",
 
         "type-of-interaction": "交互类组件",
         "button": "按钮",

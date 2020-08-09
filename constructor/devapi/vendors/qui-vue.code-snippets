@@ -86,11 +86,11 @@
         "prefix": ["document-template-markdown", "dtm"],
         "body": [
             "# {1:Name} <strong>{2:Identity}</strong>",
-            "## {{ $t(\"common.usage.preview\") }}",
+            "## {{ \\$t(\"common.usage.preview\") }}",
             "<example></example>",
-            "## {{ $t(\"common.usage.usage\") }}",
-            "{{ $t(\"common.usage.usage-tips\") }}",
-            "## {{ $t(\"common.usage.property\") }}"
+            "## {{ \\$t(\"common.usage.usage\") }}",
+            "{{ \\$t(\"common.usage.usage-tips\") }}",
+            "## {{ \\$t(\"common.usage.property\") }}"
         ]
     },
     "i18n": {

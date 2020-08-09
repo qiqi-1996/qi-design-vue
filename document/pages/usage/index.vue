@@ -66,6 +66,12 @@ export default {
                     imageLight: require("./icons/input_light.png"),
                     imageDark: require("./icons/input_dark.png"),
                 },
+                {
+                    to: "/usage/slider",
+                    title: "slider",
+                    imageLight: require("./icons/slider_light.png"),
+                    imageDark: require("./icons/slider_dark.png"),
+                },
                 // {
                 //     to: "/usage/form-group",
                 //     title: "表单组",
