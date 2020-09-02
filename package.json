@@ -1,6 +1,6 @@
 {
   "name": "qi-design-vue",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Qi Design Standard | An implement for Web UI components based on Vue.",
   "scripts": {
     "start": "cross-env NODE_ENV=development node -r esm bootstrap.js development",
@@ -46,14 +46,14 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-px-to-viewport": "^1.1.1",
     "raw-loader": "^4.0.1",
-    "serve": "^11.3.0",
+    "serve": "^11.3.2",
     "style-loader": "^1.1.3",
     "terser-webpack-plugin": "^3.0.1",
     "vue-loader": "^15.9.1",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {

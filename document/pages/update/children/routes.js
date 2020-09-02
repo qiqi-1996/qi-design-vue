@@ -20,6 +20,11 @@ export default [
         component: ()=>import(/* webpackChunkName: "202008" */"./202008/index.vue"),
     },
     {
+        name: "202009",
+        path: "202009",
+        component: ()=>import(/* webpackChunkName: "202009" */"./202009/index.vue"),
+    },
+    {
         name: "404",
         path: "404",
         component: ()=>import(/* webpackChunkName: "404" */"./404/index.vue"),
