@@ -26,7 +26,7 @@
     "@qiqi1996/qi-rollup-dev": "^1.3.0",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "@vue/babel-preset-jsx": "^1.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "cross-env": "^7.0.2",
